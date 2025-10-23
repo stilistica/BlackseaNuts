@@ -1,4 +1,4 @@
 import "../styles/main.scss";
-import { mult } from "./modules/header";
 
-console.log(mult(2, 4));
+import "./modules/menu.js";
+import "./modules/header.js";

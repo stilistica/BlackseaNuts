@@ -1,0 +1,49 @@
+@use "../base/globals.scss" as s;
+
+.products-home {
+  @include s.d-flex($direction: column, $align: center);
+  gap: 66px;
+  // gap: 46px;
+  &.section {
+    padding-top: 83px;
+  }
+  &__info {
+    @include s.d-flex($direction: column, $align: center);
+    gap: 30px;
+
+    font-family: s.$font__rel;
+    h2 {
+      font-weight: 800;
+      font-size: 45px;
+      letter-spacing: 0.01em;
+    }
+    p {
+      max-width: 620px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.22222;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+  }
+  &__store {
+    cursor: pointer;
+
+    padding: 17.5px 27.5px;
+    border: 1.5px solid s.$color__green-dark;
+    background: s.$color__white;
+
+    font-family: s.$font__rel;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: s.$color__green-dark;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      background: s.$color__green-dark;
+      color: s.$color__white;
+    }
+  }
+}

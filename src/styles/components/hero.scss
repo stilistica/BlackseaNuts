@@ -1,0 +1,86 @@
+@use "../base/globals.scss" as s;
+
+.hero-home {
+  width: 100%;
+  min-height: 417px;
+
+  background-image: url("../img/homepage/hero-mob.webp");
+  @include s.bgr();
+
+  @include s.d-flex($direction: column, $align: center, $justify: center);
+
+  @media (min-width: s.$media_768) {
+    background-image: url("../img/homepage/hero-desk.webp");
+  }
+  @media (min-width: s.$media_1440) {
+    min-height: 600px;
+  }
+  @media (min-width: s.$media_1920) {
+  }
+}
+.hero-one {
+  @include s.d-flex($direction: column, $align: center);
+  text-align: center;
+
+  font-family: s.$font__rel;
+  color: s.$color__white;
+  margin-bottom: 8px;
+
+  h1 {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 0.01em;
+  }
+  p {
+    margin-bottom: 20px;
+
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+    text-align: center;
+  }
+  a {
+    svg {
+      width: 45px;
+      height: 45px;
+      use {
+        --color1: #fff;
+
+        transition: all 0.5s ease;
+      }
+    }
+    &:hover {
+      use {
+        --color1: #ffffff9e;
+      }
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    margin-top: 62px;
+    margin-bottom: 0px;
+		gap: 30px;
+
+    h1 {
+      margin-bottom: 0px;
+
+      font-size: 62px;
+    }
+    p {
+			width: 700px;
+      margin-bottom: 0px;
+
+      font-size: 25px;
+      line-height: 1.35;
+    }
+    a {
+      svg {
+        width: 61px;
+        height: 61px;
+      }
+    }
+  }
+  @media (min-width: s.$media_1920) {
+  }
+}
