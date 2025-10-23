@@ -21,7 +21,7 @@
 
         transition: fill 0.5s ease;
       }
-      p {
+      a {
         font-weight: 500;
         // font-size: 12px;
         font-size: 11px;
@@ -40,7 +40,7 @@
         svg {
           fill: s.$color__black;
         }
-        p {
+        a {
           color: s.$color__green-dark;
           span {
             color: s.$color__black;
@@ -48,7 +48,7 @@
         }
       }
     }
-    a {
+    &-order {
       font-family: s.$font__rel;
       font-weight: 600;
       font-size: 13px;
@@ -63,6 +63,7 @@
       }
     }
     &-language {
+      cursor: pointer;
       position: absolute;
       top: 0;
       right: 0;
@@ -72,6 +73,8 @@
       border: 1px solid s.$color__green;
       @include s.d-flex($direction: row, $align: center);
       // gap: 2px;
+
+      transition: border 0.5s ease;
       span {
         font-weight: 500;
         font-size: 13px;
@@ -81,6 +84,9 @@
         width: 11px;
         height: 8px;
         fill: s.$color__green-dark;
+      }
+      &:hover {
+        border: 1px solid s.$color__green-dark;
       }
     }
   }
@@ -150,7 +156,7 @@
     &__first {
       gap: 25px;
       &-call {
-        p {
+        a {
           font-size: 12px;
         }
       }
@@ -203,6 +209,8 @@
         width: 16px;
         height: 16px;
         fill: s.$color__black;
+
+        transition: fill 0.5s ease;
       }
       &:hover {
         svg {
@@ -225,9 +233,15 @@
         font-size: 14px;
         letter-spacing: 0.02em;
         color: s.$color__gray-dark;
+
+        transition: color 0.5s ease;
         svg {
           width: 13px;
           height: 13px;
+        }
+
+        &:hover {
+          color: s.$color__green;
         }
       }
       &-reg {
@@ -239,6 +253,12 @@
         color: s.$color__gray-dark;
 
         border-bottom: 1px solid s.$color__green;
+
+        transition: color 0.5s ease;
+
+        &:hover {
+          color: s.$color__green;
+        }
       }
     }
     &-soc {
@@ -261,7 +281,9 @@
     }
   }
   &__three {
-    li {
+    @include s.d-flex($direction: column);
+
+    a {
       padding: 15px 12px;
 
       font-family: s.$font__rel;
@@ -269,21 +291,15 @@
       font-size: 15px;
       letter-spacing: 0.02em;
       background: transparent;
+      color: s.$color__blue-dark;
 
       border: 1px solid rgba(0, 0, 0, 0.04);
       transition: all 0.5s ease;
-      a {
-        color: s.$color__blue-dark;
-
-        transition: all 0.5s ease;
-      }
 
       &:hover {
         background: s.$color__green-dark;
         font-weight: 700;
-        a {
-          color: s.$color__white;
-        }
+        color: s.$color__white;
       }
     }
   }
@@ -341,9 +357,14 @@
             font-size: 13px;
             letter-spacing: 0.02em;
             color: s.$color__gray-dark;
+
+            transition: color 0.5s ease;
             svg {
               width: 11px;
               height: 11px;
+            }
+            &:hover {
+              color: s.$color__green;
             }
           }
           &-reg {
@@ -355,9 +376,15 @@
             color: s.$color__gray-dark;
 
             border-bottom: 2px solid s.$color__green;
+            transition: color 0.5s ease;
+
+            &:hover {
+              color: s.$color__green;
+            }
           }
         }
         &-language {
+          cursor: pointer;
           position: relative;
           @include s.d-flex($direction: row, $align: center);
           gap: 4px;
@@ -372,6 +399,13 @@
             width: 8px;
             height: 6px;
             fill: s.$color__green;
+
+            transition: fill 0.5s ease;
+          }
+          &:hover {
+            svg {
+              fill: s.$color__black;
+            }
           }
         }
       }
@@ -413,6 +447,13 @@
                   use {
                     --color2: #337d5a;
                     --color1: #fff;
+
+                    transition: all 0.5s ease;
+                  }
+                }
+                &:hover {
+                  use {
+                    --color2: #93b474;
                   }
                 }
               }
@@ -421,12 +462,18 @@
           &-tel {
             @include s.d-flex($direction: column);
             gap: 3px;
-            p {
+            a {
               font-weight: 500;
               font-size: 10px;
               color: s.$color__black;
+
+              transition: color 0.5s ease;
               span {
                 font-weight: 600;
+                color: s.$color__green-dark;
+              }
+
+              &:hover {
                 color: s.$color__green-dark;
               }
             }
@@ -446,7 +493,14 @@
             color: s.$color__white;
 
             background: s.$color__green-dark;
-            border: none;
+            border: 1px solid transparent;
+
+            transition: all 0.5s ease;
+            &:hover {
+              border: 1px solid s.$color__green-dark;
+              color: s.$color__green-dark;
+              background: s.$color__white;
+            }
           }
           p {
             display: none;
@@ -493,9 +547,14 @@
         font-size: 10px;
         letter-spacing: 0.02em;
         color: s.$color__blue-dark;
+
+        transition: color 0.5s ease;
         &.active-link {
           border-bottom: 3px solid s.$color__green-dark;
           font-weight: 600;
+          color: s.$color__green-dark;
+        }
+        &:hover {
           color: s.$color__green-dark;
         }
       }
@@ -523,7 +582,7 @@
       }
       &-info {
         &-connect {
-          margin-right: 93px;
+          margin-right: 90px;
 
           gap: 32px;
 
@@ -538,7 +597,7 @@
             }
           }
           &-tel {
-            p {
+            a {
               font-size: 13px;
             }
           }

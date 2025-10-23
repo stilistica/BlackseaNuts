@@ -20,13 +20,13 @@ function openModal() {
     </div>
     <div class="header-mob-burger__two">
       <div class="header-mob-burger__two-acc">
-        <p class="header-mob-burger__two-acc-exit">
+        <a href="#" class="header-mob-burger__two-acc-exit">
           <svg>
             <use href="${sprite}#icon-entrance"></use>
           </svg>
           Вход
-        </p>
-        <p class="header-mob-burger__two-acc-reg">Регистрация</p>
+        </a>
+        <a href="#" class="header-mob-burger__two-acc-reg">Регистрация</a>
       </div>
       <ul class="header-mob-burger__two-soc">
         <li>
@@ -52,14 +52,14 @@ function openModal() {
         </li>
       </ul>
     </div>
-    <ul class="header-mob-burger__three">
-      <li><a href="./about.html" aria-label="link">Магазин</a></li>
-      <li><a href="./about.html" aria-label="link">О производстве</a></li>
-      <li><a href="./about.html" aria-label="link">Оплата и доставка</a></li>
-      <li><a href="./about.html" aria-label="link">Оптовым и корпоративным клиентам</a></li>
-      <li><a href="./about.html" aria-label="link">Новости и статьи</a></li>
-      <li><a href="./about.html" aria-label="link">Контакты</a></li>
-    </ul>`;
+    <nav class="header-mob-burger__three">
+      <a href="./about.html" aria-label="link">Магазин</a>
+      <a href="./about.html" aria-label="link">О производстве</a>
+      <a href="./about.html" aria-label="link">Оплата и доставка</a>
+      <a href="./about.html" aria-label="link">Оптовым и корпоративным клиентам</a>
+      <a href="./about.html" aria-label="link">Новости и статьи</a>
+      <a href="./about.html" aria-label="link">Контакты</a>
+    </nav>`;
   // document.body.appendChild(modal);
   headerMob.appendChild(modal);
 
