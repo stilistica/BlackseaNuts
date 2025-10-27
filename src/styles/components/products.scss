@@ -47,3 +47,55 @@
     }
   }
 }
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 30px;
+  row-gap: 49px;
+  align-items: center;
+  &__item {
+    width: 300px;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    @include s.d-flex($direction: column, $align: center);
+
+    &-flag {
+      position: absolute;
+      top: 0px;
+      width: 82px;
+      height: 32px;
+      svg {
+        width: 82px;
+        height: 82px;
+      }
+      p {
+        position: absolute;
+        top: 0;
+        font-family: s.$font__rel;
+        font-weight: 800;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+        // color: #fff;
+      }
+      &-sale {
+        svg {
+          fill: #dd133b;
+        }
+      }
+      &-new {
+        svg {
+          fill: #e1843e;
+        }
+      }
+    }
+    .swiper-products {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      & .swiper-slide {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
