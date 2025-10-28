@@ -18,12 +18,12 @@ const productsData = [
     name: "Грецкий орех",
     desc: "Орех сладкий, классический, очищенный",
     weight: 40,
-    package: "вакуумна",
+    package: "вакуумная",
     price: 19,
     images: [img1, img1],
     promo: {
       type: "sale",
-      oldPrice: 21,
+      oldPrice: "21 грн.",
     },
   },
   {
@@ -52,7 +52,7 @@ const productsData = [
     name: "Грецкий орех",
     desc: "Орех сладкий, классический, очищенный",
     weight: 80,
-    package: "вакуумна",
+    package: "вакуумная",
     price: 42,
     images: [img4, img4],
   },
@@ -116,19 +116,19 @@ if (productContainer) {
     );
 
     let priceHtml = `
-<div class="products__item-price">
-	<p class="products__item-price-title">Цена: </p>
-	<p class="products__item-price-number">${product.price}</p>
+<div class="products__item-info-two-price">
+	<p class="products__item-info-two-price-title">Цена: </p>
+	<p class="products__item-info-two-price-number"><span>от </span>${product.price}<span> грн.</span></p>
 </div>
 		`;
 
     if (product.promo?.type === "sale") {
       priceHtml = `
-<div class="products__item-price">
-  <p class="products__item-price-title">Цена:</p>
-  <div class="products__item-price-sale">
-		<p class="products__item-price-sale-new">${product.price}</p>
-		<p class="products__item-price-sale-old">${product.promo.oldPrice}</p>
+<div class="products__item-info-two-price">
+  <p class="products__item-info-two-price-title">Цена:</p>
+  <div class="products__item-info-two-price-sale">
+		<p class="products__item-info-two-price-sale-new">${product.price}<span> грн.</span></p>
+		<p class="products__item-info-two-price-sale-old">${product.promo.oldPrice}</p>
 	</div>
 </div>
 			`;
@@ -136,8 +136,6 @@ if (productContainer) {
 
     item.innerHTML = `
 		${flag}
-
-
 		<div class="swiper-products product-swiper-${index}">
 		<div class="swiper-wrapper">
 		  ${slides}
@@ -168,7 +166,7 @@ if (productContainer) {
         </svg>
         <div class="products__item-info-one-stat-wight-info">
           <span>Масса:</span>
-          <p>${product.weight}</p>
+          <p>${product.weight}г.</p>
         </div>
       </div>
       <div class="products__item-info-one-stat-package">
@@ -208,6 +206,6 @@ if (productContainer) {
       },
       loop: true,
     });
-		swiperProducts.update();
+    swiperProducts.update();
   });
 }

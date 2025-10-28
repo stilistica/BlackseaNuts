@@ -28,3 +28,15 @@
   background-origin: $origin;
   background-clip: $clip;
 }
+
+@mixin btn-gr-wh() {
+  border: 1px solid v.$color__green-dark;
+  background: v.$color__green-dark;
+  color: v.$color__white;
+
+  transition: all 0.5s ease;
+  &:hover {
+    background: v.$color__white;
+    color: v.$color__green-dark;
+  }
+}
