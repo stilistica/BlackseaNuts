@@ -11,6 +11,7 @@ import img3 from "../../img/components/products/image-3.webp";
 import img4 from "../../img/components/products/image-4.webp";
 import img5 from "../../img/components/products/image-5.webp";
 import img6 from "../../img/components/products/image-6.webp";
+import { getBasket, setBasket, updateBasketCounter } from "./localStorage";
 
 const productsData = [
   {
@@ -207,5 +208,17 @@ if (productContainer) {
       loop: true,
     });
     swiperProducts.update();
+
+		const buyBtn = item.querySelector(".products__item-info-two-btn");
+		buyBtn.addEventListener("click", () => {
+			let basket = getBasket();
+
+			const exists = basket.some(el => el.id === product.id);
+			if (exists) return;
+
+			basket.push(product);
+			setBasket(basket);
+			updateBasketCounter();
+		})
   });
 }
