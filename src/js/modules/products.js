@@ -108,7 +108,7 @@ if (productContainer) {
     const slides = product.images.map(
       (img) => `
 <div class="products__item-image swiper-slide">
-  <img src="${img}" alt="${product.name}" />
+  <img src="${img}" alt="${product.name}" class="products__img" />
   <svg class="products__item-image-zoom">
     <use href="../img/sprite.svg#icon-zoom"></use>
   </svg>
@@ -209,16 +209,79 @@ if (productContainer) {
     });
     swiperProducts.update();
 
-		const buyBtn = item.querySelector(".products__item-info-two-btn");
-		buyBtn.addEventListener("click", () => {
-			let basket = getBasket();
+    const buyBtn = item.querySelector(".products__item-info-two-btn");
+    buyBtn.addEventListener("click", () => {
+      let basket = getBasket();
 
-			const exists = basket.some(el => el.id === product.id);
-			if (exists) return;
+      const exists = basket.some((el) => el.id === product.id);
+      if (exists) return;
 
-			basket.push(product);
-			setBasket(basket);
-			updateBasketCounter();
-		})
+      basket.push(product);
+      setBasket(basket);
+      updateBasketCounter();
+    });
+
+    class ImageZoom {
+      constructor(container) {
+        this.container = container;
+        this.image = this.container.querySelector(".products__img");
+        this.zoomEnabled = false;
+        this.scale = 2; 
+
+        this.init();
+      }
+      init() {
+        if (!this.container || !this.image) return;
+
+        const zoomBtn = this.container.querySelector(
+          ".products__item-image-zoom"
+        );
+        if (zoomBtn) {
+          zoomBtn.addEventListener("click", () => {
+            this.toggleZoom();
+          });
+        }
+        this.container.addEventListener("mousemove", (e) => {
+          if (!this.zoomEnabled) return;
+
+          const rect = this.image.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width) * 100;
+          const y = ((e.clientY - rect.top) / rect.height) * 100;
+          this.image.style.transformOrigin = `${x}% ${y}%`;
+
+          const buffer = 25; 
+          const outside =
+            e.clientX < rect.left - buffer ||
+            e.clientX > rect.right + buffer ||
+            e.clientY < rect.top - buffer ||
+            e.clientY > rect.bottom + buffer;
+
+          if (outside && this.zoomEnabled) {
+            this.disableZoom();
+          }
+        });
+      }
+
+      toggleZoom() {
+        this.zoomEnabled ? this.disableZoom() : this.enableZoom();
+      }
+
+      enableZoom() {
+        this.zoomEnabled = true;
+        this.image.style.transition = "transform 0.2s ease";
+        this.image.style.transform = `scale(${this.scale})`;
+        this.image.style.cursor = "zoom-out";
+      }
+
+      disableZoom() {
+        this.zoomEnabled = false;
+        this.image.style.transform = "scale(1)";
+        this.image.style.cursor = "zoom-in";
+      }
+    }
+
+    const zoomBlocks = item.querySelectorAll(".products__item-image");
+    zoomBlocks.forEach((block) => new ImageZoom(block));
+
   });
 }
