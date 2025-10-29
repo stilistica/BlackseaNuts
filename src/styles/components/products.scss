@@ -6,6 +6,7 @@
   // gap: 46px;
   &.section {
     padding-top: 83px;
+    padding-bottom: 90px;
   }
   &__info {
     @include s.d-flex($direction: column, $align: center);

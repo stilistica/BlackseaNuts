@@ -110,7 +110,7 @@ if (productContainer) {
 <div class="products__item-image swiper-slide">
   <img src="${img}" alt="${product.name}" class="products__img" />
   <svg class="products__item-image-zoom">
-    <use href="../img/sprite.svg#icon-zoom"></use>
+    <use href="${sprite}#icon-zoom"></use>
   </svg>
 </div>
 			`
@@ -144,12 +144,12 @@ if (productContainer) {
 		<div class="products__item-image-buttons">
     <button class="products__item-image-buttons-prev">
       <svg>
-        <use href="../img/sprite.svg#icon-left-arrow"></use>
+        <use href="${sprite}#icon-left-arrow"></use>
       </svg>
     </button>
     <button class="products__item-image-buttons-next">
       <svg>
-        <use href="../img/sprite.svg#icon-right-arrow"></use>
+        <use href="${sprite}#icon-right-arrow"></use>
       </svg>
     </button>
     </div>
@@ -163,7 +163,7 @@ if (productContainer) {
     <div class="products__item-info-one-stat">
       <div class="products__item-info-one-stat-wight">
         <svg>
-          <use href="../img/sprite.svg#icon-mass"></use>
+          <use href="${sprite}#icon-mass"></use>
         </svg>
         <div class="products__item-info-one-stat-wight-info">
           <span>Масса:</span>
@@ -172,7 +172,7 @@ if (productContainer) {
       </div>
       <div class="products__item-info-one-stat-package">
         <svg>
-          <use href="../img/sprite.svg#icon-package"></use>
+          <use href="${sprite}#icon-package"></use>
         </svg>
         <div class="products__item-info-one-stat-package-info">
           <span>Упаковка:</span>
