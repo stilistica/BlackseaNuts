@@ -1,0 +1,96 @@
+@use "../base/globals.scss" as s;
+
+.statistics {
+  padding-top: 19px;
+  padding-bottom: 86px;
+
+  &__list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+    &-item {
+      @include s.d-flex($direction: column, $align: center);
+      gap: 5px;
+      color: s.$color__blue-dark;
+
+      h1 {
+        position: relative;
+        font-weight: 800;
+        font-size: 72px;
+        letter-spacing: 0.01em;
+        span {
+          position: absolute;
+          top: 15px;
+          right: -28px;
+
+          font-family: s.$font__rel;
+          font-weight: 900;
+          font-size: 18px;
+          letter-spacing: 0.05em;
+        }
+      }
+      p {
+        font-family: s.$font__rel;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+        text-align: center;
+      }
+
+      &-three {
+        p {
+          max-width: 310px;
+        }
+      }
+    }
+  }
+  @media (min-width: s.$media_768) {
+    padding-bottom: 86px;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    &__list {
+      @include s.d-flex($direction: row, $justify: space-between);
+
+      gap: 0px;
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    padding-top: 69px;
+
+    &__list {
+      width: 1132px;
+      @include s.d-flex($direction: row, $align: center);
+      &-item {
+        &-one {
+          margin-right: 185px;
+          p {
+            width: 140px;
+          }
+        }
+        &-two {
+          margin-right: 108px;
+          p {
+            width: 140px;
+          }
+        }
+        &-three {
+          margin-right: 100px;
+          p {
+            max-width: 310px;
+          }
+        }
+        &-four {
+          p {
+            width: 144px;
+          }
+        }
+      }
+    }
+  }
+}
