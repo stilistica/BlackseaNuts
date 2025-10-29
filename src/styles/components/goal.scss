@@ -1,0 +1,80 @@
+@use "../base/globals.scss" as s;
+
+.goal {
+  width: 100%;
+  min-height: 417px;
+
+  background-image: url("../img/components/goal/image-1.webp");
+  @include s.bgr();
+
+  @include s.d-flex($direction: column, $align: center, $justify: center);
+  &__info {
+    @include s.d-flex($direction: column, $align: center);
+    gap: 26px;
+
+    color: s.$color__white;
+    font-family: s.$font__rel;
+    h1 {
+      font-weight: 800;
+      font-size: 27px;
+      letter-spacing: 0.003em;
+      text-align: center;
+      margin-left: -5px;
+    }
+    button {
+      margin-right: 15px;
+      border: none;
+      background: transparent;
+
+      border-radius: 100%;
+
+      transition: background 0.5s ease;
+      svg {
+        width: 61px;
+        height: 61px;
+      }
+      &:hover {
+        background: s.$color__green-dark;
+      }
+    }
+    p {
+      font-style: italic;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+    }
+  }
+  @media (min-width: s.$media_768) {
+    min-height: 517px;
+    &__info {
+      margin-top: 35px;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    min-height: 740px;
+    &__info {
+      margin-top: 35px;
+      h1 {
+        font-size: 45px;
+        margin-bottom: 22px;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    &__info {
+      h1 {
+        padding: 0 40px;
+        margin-bottom: 42px;
+      }
+    }
+  }
+}
