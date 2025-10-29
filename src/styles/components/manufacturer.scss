@@ -91,10 +91,9 @@
   gap: 35px;
   &__info {
     margin-left: -2px;
-    @include s.d-flex($direction: column);
+    @include s.d-flex($direction: column, $align: center);
     gap: 42px;
 
-    max-width: 497px;
     &-title {
       font-family: s.$font__rel;
       font-weight: 800;
@@ -106,6 +105,7 @@
       @include s.d-flex($direction: column);
       gap: 26px;
       p {
+        text-align: center;
         font-family: s.$font__rel;
         font-weight: 500;
         font-size: 16px;
@@ -136,6 +136,12 @@
     padding-top: 20px;
 
     &__info {
+      @include s.d-flex($direction: column);
+      &-desc {
+        p {
+          text-align: left;
+        }
+      }
       &-title {
         font-size: 45px;
       }
@@ -146,6 +152,8 @@
     @include s.d-flex($direction: row, $justify: space-between);
     gap: 20px;
     &__info {
+      max-width: 497px;
+
       &-title {
         font-size: 45px;
       }
