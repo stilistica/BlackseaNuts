@@ -1,0 +1,66 @@
+@use "../base/globals.scss" as s;
+
+// -------home------
+.eco-home {
+  width: 100%;
+  min-height: 470px;
+
+  background-image: url("../img/components/eco/bgr-1.webp");
+  @include s.bgr();
+
+  @include s.d-flex($direction: column, $align: center, $justify: center);
+  
+	@media (min-width: s.$media_1440) {
+    min-height: 740px;
+  }
+}
+.eco {
+  @include s.d-flex($direction: column, $align: center);
+  text-align: center;
+  font-family: s.$font__rel;
+  color: s.$color__white;
+
+  svg {
+    width: 70px;
+    height: 74px;
+
+    margin-bottom: 26px;
+  }
+  h1 {
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 0.01em;
+
+    margin-bottom: 21px;
+  }
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.27273;
+    letter-spacing: 0.01em;
+  }
+
+  @media (min-width: s.$media_768) {
+    h1 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: s.$media_1440) {
+    margin-bottom: 45px;
+    svg {
+      margin-bottom: 46px;
+    }
+    h1 {
+      font-size: 45px;
+    }
+    p {
+      width: 660px;
+
+      font-size: 22px;
+    }
+  }
+}
