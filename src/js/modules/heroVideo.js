@@ -21,4 +21,20 @@ playButtons.forEach((btn) => {
     hero.classList.add("playing");
     heroText.style.display = "none";
   });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const playingHero = document.querySelectorAll(".hero.playing");
+      playingHero.forEach((hero) => {
+        const videoContainer = hero.querySelector(".hero-video");
+        const heroText = hero.querySelector(".hero-text");
+
+        videoContainer.innerHTML = "";
+        videoContainer.style.display = "none";
+
+        heroText.style.display = "flex";
+        hero.classList.remove("playing");
+      });
+    }
+  });
 });
