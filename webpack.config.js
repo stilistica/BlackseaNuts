@@ -34,6 +34,22 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'pages', 'corporate.html'),
       filename: "corporate.html",
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'payment.html'),
+      filename: "payment.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'articles.html'),
+      filename: "articles.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'gallery.html'),
+      filename: "gallery.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'catalog.html'),
+      filename: "catalog.html",
+    }),
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
     //   filename: "index.html",
