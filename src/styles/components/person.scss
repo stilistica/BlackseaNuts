@@ -1,0 +1,187 @@
+@use "../base/globals.scss" as s;
+
+.about-person {
+  padding-top: 10px;
+  padding-bottom: 92px;
+  @include s.d-flex($direction: column, $align: center);
+  gap: 30px;
+  &__info {
+    @include s.d-flex($direction: column);
+    gap: 22px;
+    img {
+      height: auto;
+    }
+    &-text {
+      margin-top: 30px;
+      @include s.d-flex($direction: column);
+      &-name {
+        font-family: s.$font__rel;
+        font-weight: 800;
+        font-size: 32px;
+        letter-spacing: 0.01em;
+
+        margin-bottom: 12px;
+      }
+      &-desc {
+        font-family: s.$font__rel;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.3125;
+        letter-spacing: -0.01em;
+
+        margin-bottom: 30px;
+      }
+      &-citation {
+        @include s.d-flex($direction: row);
+        gap: 12px;
+        svg {
+          width: 26px;
+          height: 26px;
+        }
+        span {
+          margin-top: 6px;
+          width: auto;
+
+          font-family: s.$font__rel;
+          font-style: italic;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 1.36;
+
+          margin-bottom: 58px;
+
+          br {
+            display: none;
+          }
+        }
+      }
+      &-btn {
+        @include s.d-flex($direction: row, $align: center, $justify: center);
+
+        width: 188px;
+        height: 52px;
+        @include s.btn-wh-gr();
+
+        font-family: s.$font__rel;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        color: s.$color__green-dark;
+      }
+    }
+  }
+  &__history {
+    padding: 31px 25px 31px 25px;
+    padding: 31px 25px 31px 25px;
+    box-sizing: border-box;
+
+    height: auto;
+    overflow: hidden;
+
+    position: relative;
+    @include s.d-flex($direction: column);
+
+    gap: 30px;
+
+    color: s.$color__white;
+    background: s.$color__green-dark;
+
+    svg {
+      position: absolute;
+      bottom: -26px;
+      right: -89px;
+
+      width: 323px;
+      height: 299px;
+
+      fill: rgba(255, 255, 255, 0.08);
+    }
+
+    &-title {
+      font-family: s.$font__rel;
+      font-weight: 800;
+      font-size: 25px;
+      letter-spacing: 0.01em;
+    }
+    &-text {
+      @include s.d-flex($direction: column);
+      gap: 15.5px;
+
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.57143;
+        color: #fcfcfc;
+      }
+    }
+  }
+
+  @media (min-width: s.$media_768) {
+    padding-top: 50px;
+    @include s.d-flex($direction: column);
+    gap: 30px;
+    &__info {
+      @include s.d-flex($direction: row);
+      gap: 22px;
+      &-text {
+        &-citation {
+          span {
+            max-width: 355px;
+          }
+        }
+      }
+    }
+    &__history {
+
+      &-title {
+        font-size: 27px;
+      }
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    padding-top: 100px;
+    @include s.d-flex($direction: row, $align: center, $justify: space-between);
+    gap: 0px;
+    &__info {
+      @include s.d-flex($direction: row);
+      gap: 22px;
+      img {
+        width: 342px;
+        height: 473px;
+      }
+    }
+    &__history {
+
+      width: 453px;
+      max-width: none;
+
+      &-title {
+        font-size: 30px;
+      }
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    &__info {
+      gap: 42px;
+      img {
+        height: 492px;
+      }
+    }
+    &__history {
+      padding: 31px 25px 31px 48px;
+
+      height: 492px;
+
+      &-title {
+        font-size: 32px;
+      }
+      &-text {
+        p {
+          &:last-child {
+            width: 360px;
+          }
+        }
+      }
+    }
+  }
+}

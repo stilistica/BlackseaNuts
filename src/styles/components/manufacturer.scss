@@ -176,7 +176,7 @@
 }
 // ------about------
 .manufacturer-about {
-  padding-top: 10px;
+  padding-top: 60px;
   padding-bottom: 91px;
   @include s.d-flex($direction: column);
   gap: 35px;
@@ -207,7 +207,7 @@
   }
 
   @media (min-width: s.$media_768) {
-    padding-top: 20px;
+    padding-top: 80px;
 
     &__info {
       @include s.d-flex($direction: column);

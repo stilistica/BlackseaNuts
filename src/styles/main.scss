@@ -7,6 +7,7 @@
 @use "./base/base.scss";
 @use "./base/container.scss";
 
+
 @use "./components/header.scss" as *;
 @use "./components/hero.scss" as *;
 @use "./components/products.scss" as *;
@@ -17,4 +18,7 @@
 @use "./components/eco.scss" as *;
 @use "./components/newsSwiper.scss" as *;
 @use "./components/map.scss" as *;
+
+@use "./components/person.scss" as *;
+
 @use "./components/footer.scss" as *;
