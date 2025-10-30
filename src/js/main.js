@@ -8,3 +8,4 @@ import "./modules/manufacturerSwiper.js";
 import "./modules/newsSwiper.js";
 // import "./modules/manufacturerSwiper.js";
 import "./modules/heroVideo.js";
+import "./modules/footer.js";
