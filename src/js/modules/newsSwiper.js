@@ -1,4 +1,5 @@
 import { newData } from "../arrs/news.js";
+import sprite from "../../img/sprite.svg";
 
 import Swiper from "swiper/bundle";
 import { Pagination, Keyboard } from "swiper/modules";
@@ -20,7 +21,7 @@ if (containerNewsSwiper) {
 	<img src="${el.img}" alt="${el.title}"/>
 	<button aria-label="play" class="hero-play">
     <svg>
-      <use href="../img/sprite.svg#icon-play"></use>
+      <use href="${sprite}#icon-play"></use>
     </svg>
   </button></div>
 	<div class="hero-video" style="display: none"></div>
@@ -32,7 +33,7 @@ if (containerNewsSwiper) {
     <a href="#">
       Читать
       <svg>
-        <use href="../img/sprite.svg#icon-read"></use>
+        <use href="${sprite}#icon-read"></use>
       </svg>
     </a>
   </div>
@@ -51,7 +52,7 @@ if (containerNewsSwiper) {
     <a href="#">
       Читать
       <svg>
-        <use href="../img/sprite.svg#icon-read"></use>
+        <use href="${sprite}#icon-read"></use>
       </svg>
     </a>
   </div>
