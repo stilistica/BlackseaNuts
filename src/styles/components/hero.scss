@@ -1,5 +1,40 @@
 @use "../base/globals.scss" as s;
 
+// ------ breadcrumbs -------
+.breadcrumbs {
+  position: relative;
+  &__info {
+    position: absolute;
+    top: 33px;
+
+    @include s.d-flex($direction: row, $align: center);
+    gap: 9px;
+
+    font-family: s.$font__rel;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: s.$color__white;
+
+    span {
+      font-weight: 800;
+      font-size: 15px;
+    }
+    a {
+      margin-left: -2px;
+
+      color: s.$color__white;
+      transition: color 0.5s ease;
+
+      &:hover {
+        color: s.$color__gray;
+      }
+    }
+    p {
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
 // ---------- homepage ---------
 .hero-home {
   width: 100%;
@@ -7,8 +42,6 @@
 
   background-image: url("../img/homepage/hero-mob.webp");
   @include s.bgr();
-
-  @include s.d-flex($direction: column, $align: center, $justify: center);
 
   @media (min-width: s.$media_768) {
     background-image: url("../img/homepage/hero-desk.webp");
@@ -20,6 +53,18 @@
   }
 }
 
+// ----------- aboutpage --------
+.hero-about {
+  width: 100%;
+  min-height: 417px;
+
+  background-image: url("../img/components/aboutpage/hero.png");
+  @include s.bgr();
+
+  @media (min-width: s.$media_1440) {
+    min-height: 600px;
+  }
+}
 // --------- video hero ----------
 .hero {
   position: relative;
@@ -62,6 +107,7 @@
   font-family: s.$font__rel;
   color: s.$color__white;
   margin-bottom: 8px;
+  margin-top: 95px;
 
   h1 {
     margin-bottom: 20px;
@@ -102,7 +148,7 @@
     }
   }
   @media (min-width: s.$media_1440) {
-    margin-top: 62px;
+    margin-top: 195px;
     margin-bottom: 0px;
     gap: 30px;
 

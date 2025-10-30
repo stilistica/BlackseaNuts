@@ -1,0 +1,25 @@
+const breadcrumbsContainer = document.querySelector(".breadcrumbs");
+
+if (breadcrumbsContainer) {
+  const path = window.location.pathname;
+  const page = path.split("/").pop();
+
+  const pageNames = {
+    "index.html": "Главная",
+    "about.html": "О производстве",
+    "corporate.html": "Оптовым и корпоративным клиентам",
+    // "corporate.html": "Оптовым и корпоративным клиентам",
+    // "corporate.html": "Оптовым и корпоративным клиентам",
+  };
+
+  const currentPageName = pageNames[page] || "Страница";
+  let html = `
+<div class="breadcrumbs__info">
+<a href="index.html">Главная</a> 
+<span>→</span>
+<p>${currentPageName}</span>
+</div>
+	`;
+
+  breadcrumbsContainer.innerHTML = html;
+}

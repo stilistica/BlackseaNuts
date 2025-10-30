@@ -30,6 +30,10 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'pages', 'about.html'),
       filename: "about.html",
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'corporate.html'),
+      filename: "corporate.html",
+    }),
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
     //   filename: "index.html",
