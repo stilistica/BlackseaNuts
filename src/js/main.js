@@ -10,5 +10,6 @@ import "./modules/newsSwiper.js";
 import "./modules/footer.js";
 
 import "./modules/gallery.js";
+import "./modules/corporateTabs.js";
 
 import "./modules/heroVideo.js";
