@@ -9,8 +9,25 @@
   @include s.bgr();
 
   @include s.d-flex($direction: column, $align: center, $justify: center);
-  
-	@media (min-width: s.$media_1440) {
+
+  @media (min-width: s.$media_1440) {
+    min-height: 740px;
+  }
+}
+// -------aboutpage------
+.eco-about {
+  width: 100%;
+  min-height: 470px;
+
+  background-image: url("../img/components/aboutpage/eco.png");
+  @include s.bgr();
+
+  @include s.d-flex($direction: column, $align: center, $justify: center);
+
+  & .eco {
+    margin-top: 65px;
+  }
+  @media (min-width: s.$media_1440) {
     min-height: 740px;
   }
 }

@@ -1,5 +1,6 @@
 @use "../base/globals.scss" as s;
 
+
 .news-el {
   padding-top: 80px;
   padding-bottom: 90px;
@@ -259,4 +260,7 @@
       }
     }
   }
+}
+.news-about {
+  padding-top: 86px;
 }
