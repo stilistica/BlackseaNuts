@@ -2,6 +2,8 @@
 
 // -------home------
 .eco-home {
+  box-sizing: border-box;
+
   width: 100%;
   min-height: 470px;
 
@@ -16,6 +18,8 @@
 }
 // -------aboutpage------
 .eco-about {
+  box-sizing: border-box;
+
   width: 100%;
   min-height: 470px;
 
@@ -30,6 +34,22 @@
   @media (min-width: s.$media_1440) {
     min-height: 740px;
   }
+}
+// ------ corporate-page ------
+.eco-corporate {
+  padding-top: 232px;
+  box-sizing: border-box;
+
+  width: 100%;
+  min-height: 470px;
+
+  background-image: url("../img/components/corporatepage/eco.png");
+  @include s.bgr();
+
+  @media (min-width: s.$media_1440) {
+    min-height: 740px;
+  }
+
 }
 .eco {
   @include s.d-flex($direction: column, $align: center);
