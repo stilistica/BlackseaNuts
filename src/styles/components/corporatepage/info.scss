@@ -1,0 +1,64 @@
+@use "../../base/globals.scss" as s;
+
+.corporate-info {
+  padding-top: 79px;
+  padding-bottom: 60px;
+  @include s.d-flex($direction: column);
+  font-family: s.$font__rel;
+
+  h1 {
+    max-width: 430px;
+    font-weight: 800;
+    font-size: 27px;
+  }
+  &__text {
+    margin-top: 11px;
+    @include s.d-flex($direction: column);
+    gap: 25px;
+
+    &-div {
+      @include s.d-flex($direction: column);
+      gap: 25px;
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        span {
+          font-weight: 700;
+        }
+      }
+      &-norma {
+        max-width: 330px;
+      }
+      &-long {
+        max-width: 370px;
+      }
+      &-shot {
+        max-width: 310px;
+      }
+    }
+  }
+
+  @media (min-width: s.$media_768) {
+    padding-bottom: 111px;
+
+    h1 {
+      font-size: 25px;
+    }
+    &__text {
+      @include s.d-flex($direction: row);
+      gap: 25px;
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    @include s.d-flex($direction: row, $justify: space-between);
+    gap: 30px;
+    h1 {
+      font-size: 45px;
+    }
+    &__text {
+      @include s.d-flex($direction: row);
+      gap: 69px;
+    }
+  }
+}
