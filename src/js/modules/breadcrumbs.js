@@ -8,6 +8,8 @@ if (breadcrumbsContainer) {
     "index.html": "Главная",
     "about.html": "О производстве",
     "corporate.html": "Оптовым и корпоративным клиентам",
+    "payment.html": "Оплата и доставка",
+    // "corporate.html": "Оптовым и корпоративным клиентам",
     // "corporate.html": "Оптовым и корпоративным клиентам",
     // "corporate.html": "Оптовым и корпоративным клиентам",
   };
