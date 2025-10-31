@@ -28,6 +28,20 @@
   }
 }
 
+.play {
+  background: transparent;
+  border-radius: 100%;
+  border: none;
+
+  transition: background 0.5s ease;
+  svg {
+    width: 61px;
+    height: 61px;
+  }
+  &:hover {
+    background: s.$color__green-dark;
+  }
+}
 // .section {
 // padding-top: 45px;
 // padding-bottom: 45px;

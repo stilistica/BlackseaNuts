@@ -7,6 +7,8 @@ import "./modules/header.js";
 import "./modules/products.js";
 import "./modules/manufacturerSwiper.js";
 import "./modules/newsSwiper.js";
-// import "./modules/manufacturerSwiper.js";
-import "./modules/heroVideo.js";
 import "./modules/footer.js";
+
+import "./modules/gallery.js";
+
+import "./modules/heroVideo.js";
