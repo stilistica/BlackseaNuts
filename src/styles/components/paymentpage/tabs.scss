@@ -1,0 +1,233 @@
+@use "../../base/globals.scss" as s;
+
+.payment-tabs {
+  padding-top: 77px;
+  padding-bottom: 77px;
+  @include s.d-flex($direction: column);
+
+  &__list {
+    padding-bottom: 10px;
+
+    // @include s.d-flex($direction: row, $align: center, $justify: center);
+    @include s.d-flex(
+      $direction: row,
+      $align: center,
+      $justify: space-between,
+      $wrap: wrap
+    );
+    // gap: none;
+    gap: 40px;
+    &-item {
+      cursor: pointer;
+      position: relative;
+      @include s.d-flex($direction: row, $align: center);
+      gap: 14px;
+
+      &.payment-item-one {
+        // margin-left: 37px;
+
+        max-width: 205px;
+        // margin-right: 213px;
+        margin-right: 113px;
+      }
+      &.payment-item-two {
+        max-width: 250px;
+        // margin-right: 184px;
+        margin-right: 113px;
+      }
+      &.payment-item-three {
+        // margin-bottom: 0;
+        margin-bottom: 20px;
+        max-width: 240px;
+      }
+      svg {
+        fill: #c4c4c4;
+      }
+      &-svg-1 {
+        width: 37px;
+        height: 37px;
+      }
+      &-svg-2 {
+        width: 45px;
+        height: 45px;
+      }
+      &-svg-3 {
+        width: 31px;
+        height: 31px;
+      }
+      p {
+        margin-top: 8px;
+
+        font-family: s.$font__rel;
+        font-weight: 800;
+        font-size: 19.5px;
+        line-height: 1.15;
+        letter-spacing: 0.01em;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        margin-left: -5px;
+        margin-right: -5px;
+
+        width: 100%;
+        height: 3px;
+
+        background-color: s.$color__green-dark;
+
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &:hover {
+        svg {
+          fill: s.$color__green-dark;
+        }
+      }
+      &.active {
+        svg {
+          fill: s.$color__green-dark;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  hr {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    width: 100%;
+    margin: 0;
+  }
+  &__info {
+    padding-top: 53px;
+    // @include s.d-flex($direction: row, $justify: space-between);
+    @include s.d-flex($direction: column);
+    gap: 36px;
+
+    &-text {
+      box-sizing: border-box;
+      // width: 432px
+      width: 100%;
+      @include s.d-flex($direction: column);
+      gap: 24px;
+      &-title {
+        margin-left: -2px;
+        margin-top: 8px;
+        font-family: s.$font__rel;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 1.33333;
+      }
+      &-content {
+        @include s.d-flex($direction: column);
+        gap: 36px;
+        &-item {
+          @include s.d-flex($direction: column);
+          gap: 10px;
+          &-title {
+            margin-left: -2px;
+            @include s.d-flex($direction: row, $align: center);
+            gap: 14px;
+            svg {
+              width: 48px;
+              height: 48px;
+            }
+            h3 {
+              font-family: s.$font__rel;
+              font-style: italic;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 1.5;
+            }
+          }
+          p {
+            font-family: s.$font__rel;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+    &-img {
+      // width: 770px;
+      width: 100%;
+      // height: 471px;
+      height: 371px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    &__list {
+      @include s.d-flex($direction: row, $align: center, $justify: center);
+      &-item {
+        &.payment-item-one {
+          // margin-left: 37px;
+          // margin-right: 213px;
+        }
+        &.payment-item-two {
+          // margin-right: 184px;
+        }
+        &.payment-item-three {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__info {
+      @include s.d-flex($direction: row, $justify: space-between);
+      gap: 36px;
+
+      &-text {
+        width: 432px;
+      }
+      &-img {
+        // width: 770px;
+        width: 600px;
+        height: 471px;
+      }
+    }
+  }
+  @media (min-width: s.$media_1920) {
+
+    &__list {
+
+      @include s.d-flex($direction: row, $align: center, $justify: center);
+      gap: 0;
+      &-item {
+
+        &.payment-item-one {
+          margin-left: 37px;
+
+          width: 205px;
+          margin-right: 213px;
+        }
+        &.payment-item-two {
+          width: 250px;
+          margin-right: 184px;
+        }
+        &.payment-item-three {
+          margin-bottom: 0;
+          width: 240px;
+        }
+      }
+    }
+
+    &__info {
+      @include s.d-flex($direction: row, $justify: space-between);
+
+      &-text {
+        width: 432px;
+      }
+      &-img {
+        width: 770px;
+        height: 471px;
+      }
+    }
+  }
+}
