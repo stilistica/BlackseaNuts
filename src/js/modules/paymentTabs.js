@@ -1,4 +1,5 @@
 import { paymentTabsData } from "../arrs/paymentTabs.js";
+import sprite from "../../img/sprite.svg";
 
 const tabsPayment = document.querySelectorAll(".payment-tabs__list-item");
 const containerPayment = document.querySelector(".payment-tabs__info");
@@ -13,7 +14,7 @@ if (tabsPayment && containerPayment) {
         <li class="payment-tabs__info-text-content-item">
           <div class="payment-tabs__info-text-content-item-title">
             <svg>
-              <use href="../img/sprite.svg#icon-payment-one"></use>
+              <use href="${sprite}#icon-payment-one"></use>
             </svg>
 						<h3>${firstData.h1}</h3>
           </div>
@@ -22,7 +23,7 @@ if (tabsPayment && containerPayment) {
         <li class="payment-tabs__info-text-content-item">
           <div class="payment-tabs__info-text-content-item-title">
             <svg>
-              <use href="../img/sprite.svg#icon-payment-two"></use>
+              <use href="${sprite}#icon-payment-two"></use>
             </svg>
 						<h3>${firstData.h2}</h3>
           </div>
@@ -31,7 +32,7 @@ if (tabsPayment && containerPayment) {
         <li class="payment-tabs__info-text-content-item">
           <div class="payment-tabs__info-text-content-item-title">
             <svg>
-              <use href="../img/sprite.svg#icon-payment-three"></use>
+              <use href="${sprite}#icon-payment-three"></use>
             </svg>
 						<h3>${firstData.h3}</h3>
           </div>
@@ -57,7 +58,7 @@ if (tabsPayment && containerPayment) {
         <li class="payment-tabs__info-text-content-item">
           <div class="payment-tabs__info-text-content-item-title">
             <svg>
-              <use href="../img/sprite.svg#icon-payment-one"></use>
+              <use href="${sprite}#icon-payment-one"></use>
             </svg>
 						<h3>${data.h1}</h3>
           </div>
@@ -66,7 +67,7 @@ if (tabsPayment && containerPayment) {
         <li class="payment-tabs__info-text-content-item">
           <div class="payment-tabs__info-text-content-item-title">
             <svg>
-              <use href="../img/sprite.svg#icon-payment-two"></use>
+              <use href="${sprite}#icon-payment-two"></use>
             </svg>
 						<h3>${data.h2}</h3>
           </div>
@@ -75,7 +76,7 @@ if (tabsPayment && containerPayment) {
         <li class="payment-tabs__info-text-content-item">
           <div class="payment-tabs__info-text-content-item-title">
             <svg>
-              <use href="../img/sprite.svg#icon-payment-three"></use>
+              <use href="${sprite}#icon-payment-three"></use>
             </svg>
 						<h3>${data.h3}</h3>
           </div>
