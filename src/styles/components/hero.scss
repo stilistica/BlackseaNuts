@@ -115,6 +115,37 @@
     }
   }
 }
+// ----------- paymentpage --------
+.hero-payment {
+  width: 100%;
+  min-height: 250px;
+
+  background-image: url("../img/components/paymentpage/hero.png");
+  @include s.bgr();
+
+  @media (min-width: s.$media_1440) {
+    min-height: 298px;
+  }
+
+  &__text {
+    padding-top: 97px;
+    @include s.d-flex($direction: column, $align: center);
+
+    h1 {
+      font-family: s.$font__rel;
+      font-weight: 800;
+      // font-size: 62px;
+      font-size: 32px;
+      color: s.$color__white;
+    }
+    @media (min-width: s.$media_1440) {
+      padding-top: 117px;
+      h1 {
+        font-size: 62px;
+      }
+    }
+  }
+}
 // --------- video hero ----------
 .hero {
   position: relative;
