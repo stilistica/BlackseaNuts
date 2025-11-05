@@ -30,7 +30,7 @@ if (containerNewsSwiper) {
     <span>${el.date}</span>
     <h3>${el.title}</h3>
     <p>${el.desc}</p>
-    <a href="#">
+    <a href="articleId.html">
       Читать
       <svg>
         <use href="${sprite}#icon-read"></use>
@@ -49,7 +49,7 @@ if (containerNewsSwiper) {
     <span>${el.date}</span>
     <h3>${el.title}</h3>
     <p>${el.desc}</p>
-    <a href="#">
+    <a href="articleId.html">
       Читать
       <svg>
         <use href="${sprite}#icon-read"></use>

@@ -50,6 +50,10 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'pages', 'catalog.html'),
       filename: "catalog.html",
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'articleId.html'),
+      filename: "articleId.html",
+    }),
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
     //   filename: "index.html",
