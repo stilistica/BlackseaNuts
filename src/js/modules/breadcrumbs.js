@@ -12,7 +12,7 @@ if (breadcrumbsContainer) {
     "articles.html": "Новости и статьи",
     "articleId.html": "Новости и статьи",
     "gallery.html": "Галерея",
-    // "corporate.html": "Оптовым и корпоративным клиентам",
+    "catalog.html": "Магазин",
     // "corporate.html": "Оптовым и корпоративным клиентам",
   };
 
