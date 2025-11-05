@@ -5,6 +5,8 @@ import imgGal4 from "../../img/components/gallery/image-5.png";
 import imgGal5 from "../../img/components/gallery/image-6.png";
 import imgGal6 from "../../img/components/gallery/image-7.png";
 
+import sprite from "../../img/sprite.svg";
+
 const oneGalleryContainer = document.querySelector(".gallery-container__one");
 
 if (oneGalleryContainer) {
@@ -36,7 +38,7 @@ if (oneGalleryContainer) {
       <div class="gallery-item__textvideo hero-text">
         <button aria-label="play" class="play hero-play">
           <svg>
-            <use href="../img/sprite.svg#icon-play"></use>
+            <use href="${sprite}#icon-play"></use>
           </svg>
         </button>
         <h3>Проект UBHDP</h3>
@@ -75,7 +77,7 @@ if (oneGalleryContainer) {
       <div class="gallery-item__textvideo hero-text">
         <button aria-label="play" class="play hero-play">
           <svg>
-            <use href="../img/sprite.svg#icon-play"></use>
+            <use href="${sprite}#icon-play"></use>
           </svg>
         </button>
       </div>
