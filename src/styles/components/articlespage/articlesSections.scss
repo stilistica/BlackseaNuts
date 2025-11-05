@@ -11,6 +11,11 @@
       color: #8a8a8a;
       a {
         color: #8a8a8a;
+        transition: color 0.5s ease;
+
+        &:hover {
+          color: s.$color__black;
+        }
       }
     }
   }
