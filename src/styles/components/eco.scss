@@ -37,7 +37,7 @@
 }
 // ------ corporate-page ------
 .eco-corporate {
-  padding-top: 232px;
+  padding-top: 132px;
   box-sizing: border-box;
 
   width: 100%;
@@ -48,8 +48,8 @@
 
   @media (min-width: s.$media_1440) {
     min-height: 740px;
+    padding-top: 232px;
   }
-
 }
 .eco {
   @include s.d-flex($direction: column, $align: center);

@@ -26,6 +26,7 @@ const productsData = [
       type: "sale",
       oldPrice: "21 грн.",
     },
+    taste: "classic",
   },
   {
     id: "0092",
@@ -38,6 +39,7 @@ const productsData = [
     promo: {
       type: "new",
     },
+    taste: "sweet",
   },
   {
     id: "0093",
@@ -47,6 +49,7 @@ const productsData = [
     package: "крафтовая",
     price: 18,
     images: [img3, img3],
+    taste: "salty",
   },
   {
     id: "0191",
@@ -56,6 +59,7 @@ const productsData = [
     package: "вакуумная",
     price: 42,
     images: [img4, img4],
+    taste: "classic",
   },
   {
     id: "0192",
@@ -65,6 +69,7 @@ const productsData = [
     package: "крафтовая",
     price: 56,
     images: [img5, img5],
+    taste: "sweet",
   },
   {
     id: "0193",
@@ -74,6 +79,7 @@ const productsData = [
     package: "крафтовая",
     price: 36,
     images: [img6, img6],
+    taste: "salty",
   },
 ];
 
@@ -226,7 +232,7 @@ if (productContainer) {
         this.container = container;
         this.image = this.container.querySelector(".products__img");
         this.zoomEnabled = false;
-        this.scale = 2; 
+        this.scale = 2;
 
         this.init();
       }
@@ -249,7 +255,7 @@ if (productContainer) {
           const y = ((e.clientY - rect.top) / rect.height) * 100;
           this.image.style.transformOrigin = `${x}% ${y}%`;
 
-          const buffer = 25; 
+          const buffer = 25;
           const outside =
             e.clientX < rect.left - buffer ||
             e.clientX > rect.right + buffer ||
@@ -282,6 +288,5 @@ if (productContainer) {
 
     const zoomBlocks = item.querySelectorAll(".products__item-image");
     zoomBlocks.forEach((block) => new ImageZoom(block));
-
   });
 }

@@ -14,6 +14,7 @@ if (breadcrumbsContainer) {
     "gallery.html": "Галерея",
     "catalog.html": "Магазин",
     // "corporate.html": "Оптовым и корпоративным клиентам",
+    // "corporate.html": "Оптовым и корпоративным клиентам",
   };
 
   const currentPageName = pageNames[page] || "Страница";
