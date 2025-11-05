@@ -9,6 +9,7 @@ if (breadcrumbsContainer) {
     "about.html": "О производстве",
     "corporate.html": "Оптовым и корпоративным клиентам",
     "payment.html": "Оплата и доставка",
+    "articles.html": "Новости и статьи",
     // "corporate.html": "Оптовым и корпоративным клиентам",
     // "corporate.html": "Оптовым и корпоративным клиентам",
     // "corporate.html": "Оптовым и корпоративным клиентам",

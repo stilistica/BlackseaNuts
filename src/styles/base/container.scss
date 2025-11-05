@@ -42,6 +42,11 @@
     background: s.$color__green-dark;
   }
 }
+.articles-margin {
+  @media (min-width: s.$media_1440) {
+    margin-bottom: 53px;
+  }
+}
 // .section {
 // padding-top: 45px;
 // padding-bottom: 45px;
