@@ -146,6 +146,54 @@
     }
   }
 }
+// --------- gallerypage ----------
+.hero-gallery {
+  width: 100%;
+  min-height: 417px;
+
+  background-image: url("../img/components/gallerypage/hero.png");
+  @include s.bgr();
+
+  @media (min-width: s.$media_1440) {
+    min-height: 600px;
+  }
+  &__text {
+    padding: 150px 10px 0 10px;
+    @include s.d-flex($direction: column, $align: center);
+    gap: 12px;
+    text-align: center;
+
+    color: s.$color__white;
+    font-family: s.$font__rel;
+
+    h1 {
+      font-weight: 800;
+      font-size: 26px;
+      letter-spacing: 0.01em;
+    }
+    p {
+      max-width: 600px;
+      font-weight: 600;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    @media (min-width: s.$media_768) {
+    }
+    @media (min-width: s.$media_1440) {
+      padding-top: 238px;
+
+      h1 {
+        font-size: 62px;
+      }
+      p {
+        font-size: 25px;
+      }
+    }
+  }
+}
 // --------- video hero ----------
 .hero {
   position: relative;

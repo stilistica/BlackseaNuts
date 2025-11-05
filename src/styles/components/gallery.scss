@@ -57,7 +57,27 @@
     }
   }
 }
+// ---------- gallerypage -------
+.gallery-section {
+  &__container {
+    @include s.d-flex($direction: column, $align: center);
 
+    padding: 93px 0 102px 0;
+    &__link {
+      margin-top: 42px;
+      @include s.btn-wh-gr();
+      @include s.d-flex($direction: column, $align: center, $justify: center);
+
+      width: 199px;
+      height: 51px;
+
+      font-family: s.$font__rel;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+  }
+}
 // -----item----
 .gallery-item {
   position: relative;
@@ -229,6 +249,171 @@
     }
     & .gallery-item__six {
       width: 408px;
+    }
+  }
+}
+// ---- container one gallery -----
+.gallery-section-container__one {
+  @include s.d-flex($direction: row, $align: center, $wrap: wrap);
+  gap: 32px 30px;
+
+  width: 100%;
+  margin-bottom: 30px;
+  & .gallery-item__three {
+    height: 400px;
+    img {
+      height: 100%;
+    }
+  }
+
+  @media (min-width: s.$media_768) {
+    & .gallery-item__one {
+      width: calc(334.8 / 588 * 100%);
+    }
+    & .gallery-item__two {
+      width: calc(279 / 588 * 100%);
+      width: calc(223.2 / 588 * 100%);
+    }
+    & .gallery-item__three {
+      width: 100%;
+      height: auto;
+    }
+    & .gallery-item__four {
+      width: calc(279 / 588 * 100%);
+    }
+    & .gallery-item__five {
+      width: calc(279 / 588 * 100%);
+    }
+    & .gallery-item__six {
+      width: 100%;
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    & .gallery-item__one {
+      width: calc(1010px * 0.6);
+    }
+    & .gallery-item__two {
+      width: calc(1010px * 0.4);
+    }
+    & .gallery-item__three {
+      width: 100%;
+    }
+    & .gallery-item__four {
+      width: calc(980px * 0.333);
+    }
+    & .gallery-item__five {
+      width: calc(980px * 0.333);
+    }
+    & .gallery-item__six {
+      width: calc(980px * 0.333);
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    & .gallery-item__one {
+      width: 737px;
+    }
+    & .gallery-item__two {
+      width: 518px;
+    }
+    & .gallery-item__three {
+      & .gallery-item__textvideo {
+        margin-top: 57px;
+      }
+    }
+    & .gallery-item__four {
+      width: 408px;
+    }
+    & .gallery-item__five {
+      width: 408px;
+    }
+    & .gallery-item__six {
+      width: 408px;
+      & .gallery-item__textvideo {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+// ---- container two gallery -----
+.gallery-section-container__two {
+  @include s.d-flex($direction: row, $align: center, $wrap: wrap);
+  gap: 32px 30px;
+
+  width: 100%;
+  margin-bottom: 30px;
+
+  & .gallery-item__three {
+    height: 400px;
+    img {
+      height: 100%;
+    }
+  }
+
+  @media (min-width: s.$media_768) {
+    & .gallery-item__one {
+      width: calc(334.8 / 588 * 100%);
+    }
+    & .gallery-item__two {
+      width: calc(279 / 588 * 100%);
+      width: calc(223.2 / 588 * 100%);
+    }
+    & .gallery-item__three {
+      width: 100%;
+      height: auto;
+    }
+    & .gallery-item__four {
+      width: calc(279 / 588 * 100%);
+    }
+    & .gallery-item__five {
+      width: calc(279 / 588 * 100%);
+    }
+    & .gallery-item__six {
+      width: 100%;
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    & .gallery-item__one {
+      width: calc(1010px * 0.6);
+    }
+    & .gallery-item__two {
+      width: calc(1010px * 0.4);
+    }
+    & .gallery-item__three {
+      width: 100%;
+    }
+    & .gallery-item__four {
+      width: calc(980px * 0.333);
+    }
+    & .gallery-item__five {
+      width: calc(980px * 0.333);
+    }
+    & .gallery-item__six {
+      width: calc(980px * 0.333);
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    & .gallery-item__one {
+      width: 737px;
+    }
+    & .gallery-item__two {
+      width: 518px;
+    }
+    & .gallery-item__three {
+      & .gallery-item__textvideo {
+        margin-top: 57px;
+      }
+    }
+    & .gallery-item__four {
+      width: 408px;
+    }
+    & .gallery-item__five {
+      width: 408px;
+    }
+    & .gallery-item__six {
+      width: 408px;
+      & .gallery-item__textvideo {
+        margin-top: 16px;
+      }
     }
   }
 }

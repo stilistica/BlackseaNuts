@@ -8,6 +8,12 @@ import imgGal6 from "../../img/components/gallery/image-7.png";
 import sprite from "../../img/sprite.svg";
 
 const oneGalleryContainer = document.querySelector(".gallery-container__one");
+const oneGalleryPageContainer = document.querySelector(
+  ".gallery-section-container__one"
+);
+const twoGalleryPageContainer = document.querySelector(
+  ".gallery-section-container__two"
+);
 
 if (oneGalleryContainer) {
   let galleryHtml = `
@@ -84,11 +90,174 @@ if (oneGalleryContainer) {
 			  <div class="hero-video" style="display: none"></div>
     </div>
 	`;
-  //         <h3>Проект UBHDP</h3>
-  // <p>
-  //   Вчера к нам приезжал американский агроном Рон , спасибо Мельнику
-  //   Евгению и проекту UBHDP за возможность получить консультацию от
-  //   мировых специалистов!
-  // </p>
   oneGalleryContainer.innerHTML = galleryHtml;
+}
+
+if (oneGalleryPageContainer) {
+  let galleryHtml = `
+    <div class="gallery-item gallery-item__one">
+      <img src="${imgGal1}" alt="photo" />
+      <div class="gallery-item__hover">
+        <h3>SIAL Paris 2018</h3>
+        <p>
+          В этом Году при поддержке проекта International Trade Centre Ukraine,
+          и финансировании правительства Швеции, мы побывали на крупнейшей
+          продовольственной выставке Европы <span>SIAL Paris 2018</span>
+        </p>
+      </div>
+    </div>
+    <div class="gallery-item gallery-item__two">
+      <img src="${imgGal2}" alt="photo" />
+      <div class="gallery-item__hover">
+        <h3>SIAL Paris 2018</h3>
+        <p>
+          В этом Году при поддержке проекта International Trade Centre Ukraine,
+          и финансировании правительства Швеции, мы побывали на крупнейшей
+          продовольственной выставке Европы <span>SIAL Paris 2018</span>
+        </p>
+      </div>
+    </div>
+    <div class="gallery-item gallery-item__three hero">
+      <img src="${imgGal3}" alt="photo" />
+      <div class="gallery-item__textvideo hero-text">
+        <button aria-label="play" class="play hero-play">
+          <svg>
+            <use href="${sprite}#icon-play"></use>
+          </svg>
+        </button>
+        <h3>Проект UBHDP</h3>
+        <p>
+          Вчера к нам приезжал американский агроном Рон , спасибо Мельнику
+          Евгению и проекту UBHDP за возможность получить консультацию от
+          мировых специалистов!
+        </p>
+      </div>
+			  <div class="hero-video" style="display: none"></div>
+    </div>
+    <div class="gallery-item gallery-item__four">
+      <img src="${imgGal4}" alt="photo" />
+      <div class="gallery-item__hover">
+        <h3>SIAL Paris 2018</h3>
+        <p>
+          В этом Году при поддержке проекта International Trade Centre Ukraine,
+          и финансировании правительства Швеции, мы побывали на крупнейшей
+          продовольственной выставке Европы <span>SIAL Paris 2018</span>
+        </p>
+      </div>
+    </div>
+    <div class="gallery-item gallery-item__five">
+      <img src="${imgGal5}" alt="photo" />
+      <div class="gallery-item__hover">
+        <h3>SIAL Paris 2018</h3>
+        <p>
+          В этом Году при поддержке проекта International Trade Centre Ukraine,
+          и финансировании правительства Швеции, мы побывали на крупнейшей
+          продовольственной выставке Европы <span>SIAL Paris 2018</span>
+        </p>
+      </div>
+    </div>
+    <div class="gallery-item gallery-item__six hero">
+      <img src="${imgGal6}" alt="photo" />
+      <div class="gallery-item__textvideo hero-text">
+        <button aria-label="play" class="play hero-play">
+          <svg>
+            <use href="${sprite}#icon-play"></use>
+          </svg>
+        </button>
+        <h3>Проект UBHDP</h3>
+        <p>
+          Вчера к нам приезжал американский агроном Рон , спасибо Мельнику
+          Евгению и проекту UBHDP за возможность получить консультацию от
+          мировых специалистов!
+        </p>
+      </div>
+			  <div class="hero-video" style="display: none"></div>
+    </div>
+	`;
+
+  oneGalleryPageContainer.innerHTML = galleryHtml;
+}
+if (twoGalleryPageContainer) {
+  let galleryHtml = `
+    <div class="gallery-item gallery-item__two">
+      <img src="${imgGal2}" alt="photo" />
+      <div class="gallery-item__hover">
+        <h3>SIAL Paris 2018</h3>
+        <p>
+          В этом Году при поддержке проекта International Trade Centre Ukraine,
+          и финансировании правительства Швеции, мы побывали на крупнейшей
+          продовольственной выставке Европы <span>SIAL Paris 2018</span>
+        </p>
+      </div>
+    </div>
+    <div class="gallery-item gallery-item__one">
+      <img src="${imgGal1}" alt="photo" />
+      <div class="gallery-item__hover">
+        <h3>SIAL Paris 2018</h3>
+        <p>
+          В этом Году при поддержке проекта International Trade Centre Ukraine,
+          и финансировании правительства Швеции, мы побывали на крупнейшей
+          продовольственной выставке Европы <span>SIAL Paris 2018</span>
+        </p>
+      </div>
+    </div>
+    <div class="gallery-item gallery-item__three hero">
+      <img src="${imgGal3}" alt="photo" />
+      <div class="gallery-item__textvideo hero-text">
+        <button aria-label="play" class="play hero-play">
+          <svg>
+            <use href="${sprite}#icon-play"></use>
+          </svg>
+        </button>
+        <h3>Проект UBHDP</h3>
+        <p>
+          Вчера к нам приезжал американский агроном Рон , спасибо Мельнику
+          Евгению и проекту UBHDP за возможность получить консультацию от
+          мировых специалистов!
+        </p>
+      </div>
+			  <div class="hero-video" style="display: none"></div>
+    </div>
+    <div class="gallery-item gallery-item__four">
+      <img src="${imgGal4}" alt="photo" />
+      <div class="gallery-item__hover">
+        <h3>SIAL Paris 2018</h3>
+        <p>
+          В этом Году при поддержке проекта International Trade Centre Ukraine,
+          и финансировании правительства Швеции, мы побывали на крупнейшей
+          продовольственной выставке Европы <span>SIAL Paris 2018</span>
+        </p>
+      </div>
+    </div>
+    <div class="gallery-item gallery-item__five">
+      <img src="${imgGal5}" alt="photo" />
+      <div class="gallery-item__hover">
+        <h3>SIAL Paris 2018</h3>
+        <p>
+          В этом Году при поддержке проекта International Trade Centre Ukraine,
+          и финансировании правительства Швеции, мы побывали на крупнейшей
+          продовольственной выставке Европы <span>SIAL Paris 2018</span>
+        </p>
+      </div>
+    </div>
+    <div class="gallery-item gallery-item__six hero">
+      <img src="${imgGal6}" alt="photo" />
+      <div class="gallery-item__textvideo hero-text">
+        <button aria-label="play" class="play hero-play">
+          <svg>
+            <use href="${sprite}#icon-play"></use>
+          </svg>
+        </button>
+        <h3>Проект UBHDP</h3>
+        <p>
+          Вчера к нам приезжал американский агроном Рон , спасибо Мельнику
+          Евгению и проекту UBHDP за возможность получить консультацию от
+          мировых специалистов!
+        </p>
+      </div>
+			  <div class="hero-video" style="display: none"></div>
+    </div>
+	`;
+
+  twoGalleryPageContainer.innerHTML = galleryHtml;
 }
