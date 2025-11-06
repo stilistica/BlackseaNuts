@@ -2,14 +2,13 @@
 
 .catalog-filter {
   width: 100%;
-  padding: 70px 0 80px 0;
-  @include s.d-flex($direction: row, $align: center, $justify: space-between);
+  padding: 40px 0 30px 0;
+  @include s.d-flex($direction: column);
+  gap: 40px;
   &__one {
-    @include s.d-flex($direction: row, $align: center);
-    gap: 69px;
+    @include s.d-flex($direction: column);
+    gap: 30px;
     &-title {
-      margin-left: -2px;
-
       @include s.d-flex($direction: row, $align: center);
       gap: 9px;
       p {
@@ -23,21 +22,21 @@
       }
     }
     &-options {
-      @include s.d-flex($direction: row, $align: center);
+      @include s.d-flex($direction: column);
       gap: 28px;
 
       font-family: s.$font__rel;
       &-taste {
         position: relative;
         box-sizing: border-box;
-        width: 283px;
+        width: 100%;
 
         &-active {
           cursor: pointer;
           box-sizing: border-box;
           border: 1.5px solid rgba(0, 0, 0, 0.1);
           height: 48px;
-          width: 283px;
+          width: 100%;
           padding: 15px 15px 15px 17px;
           @include s.d-flex(
             $direction: row,
@@ -78,6 +77,8 @@
           @include s.d-flex($direction: column);
           border: 1px solid rgba(0, 0, 0, 0.08);
 
+          display: none;
+
           li {
             cursor: pointer;
             box-sizing: border-box;
@@ -106,14 +107,14 @@
       &-weight {
         position: relative;
         box-sizing: border-box;
-        width: 171px;
+        width: 100%;
 
         &-active {
           cursor: pointer;
           box-sizing: border-box;
           border: 1.5px solid rgba(0, 0, 0, 0.1);
           height: 48px;
-          width: 171px;
+          width: 100%;
           padding: 15px 13px 15px 17px;
           @include s.d-flex(
             $direction: row,
@@ -154,6 +155,8 @@
           @include s.d-flex($direction: column);
           border: 1px solid rgba(0, 0, 0, 0.08);
 
+          display: none;
+
           li {
             cursor: pointer;
             box-sizing: border-box;
@@ -180,7 +183,6 @@
         }
       }
       &-price {
-        margin-left: 24px;
         @include s.d-flex($direction: row, $align: center);
         gap: 13px;
         p {
@@ -207,9 +209,6 @@
     }
   }
   &__two {
-		margin-right: 8px;
-		margin-top: -8px;
-
     @include s.d-flex($direction: row, $align: center);
     gap: 46px;
     &-apply {
@@ -250,6 +249,63 @@
           fill: s.$color__green-dark;
         }
       }
+    }
+  }
+
+  @media (min-width: s.$media_768) {
+    padding: 50px 0 50px 0;
+    &__one {
+      gap: 40px;
+      &-options {
+        &-taste {
+          width: 450px;
+        }
+        &-weight {
+          width: 400px;
+        }
+      }
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    padding: 60px 0 60px 0;
+    &__one {
+      @include s.d-flex($direction: row, $align: center);
+      gap: 40px;
+      &-options {
+        @include s.d-flex($direction: row, $align: center);
+        &-taste {
+          width: 283px;
+          &-active {
+            width: 283px;
+          }
+        }
+        &-weight {
+          width: 171px;
+          &-active {
+            width: 171px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    padding: 70px 0 80px 0;
+    @include s.d-flex($direction: row, $align: center, $justify: space-between);
+    gap: none;
+    &__one {
+      gap: 69px;
+      &-title {
+        margin-left: -2px;
+      }
+      &-options {
+        &-price {
+          margin-left: 24px;
+        }
+      }
+    }
+    &__two {
+      margin-right: 8px;
+      margin-top: -8px;
     }
   }
 }
