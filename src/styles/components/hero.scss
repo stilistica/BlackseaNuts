@@ -146,7 +146,7 @@
     }
   }
 }
-// ----------- paymentpage --------
+// ----------- catalogpage --------
 .hero-catalog {
   width: 100%;
   min-height: 250px;
@@ -159,7 +159,7 @@
   }
 
   &__text {
-    padding-top: 97px;
+    padding: 97px 15px 0 15px;
     @include s.d-flex($direction: column, $align: center);
 
     h1 {
@@ -167,6 +167,7 @@
       font-weight: 800;
       font-size: 32px;
       color: s.$color__white;
+      text-align: center;
     }
     @media (min-width: s.$media_1440) {
       padding-top: 125px;
