@@ -13,5 +13,6 @@ import "./modules/gallery.js";
 import "./modules/corporateTabs.js";
 
 import "./modules/paymentTabs.js";
+import "./modules/catalogSwiper.js";
 
 import "./modules/heroVideo.js";
