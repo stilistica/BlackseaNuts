@@ -47,6 +47,11 @@
     margin-bottom: 53px;
   }
 }
+.catalog-margin {
+  @media (min-width: s.$media_1440) {
+    margin-bottom: 17px;
+  }
+}
 // .section {
 // padding-top: 45px;
 // padding-bottom: 45px;
