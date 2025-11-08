@@ -19,11 +19,14 @@
       & .card-info__swiper-item {
         width: 100%;
         position: relative;
+        overflow: hidden; 
         @include s.d-flex($direction: row, $align: center, $justify: center);
 
         img {
         }
         &-zoom {
+          cursor: pointer;
+          z-index: 2;
           position: absolute;
           top: 14px;
           right: 11px;
@@ -247,7 +250,7 @@
   }
   @media (min-width: s.$media_1920) {
     @include s.d-flex($direction: row, $align: center, $justify: space-between);
-    gap:none;
+    gap: none;
     &__swiper {
       margin-left: -3px;
     }
@@ -270,7 +273,6 @@
       &-precedence {
         width: 660px;
         height: 109px;
-
 
         p {
           max-width: 566px;
