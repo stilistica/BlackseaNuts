@@ -1,0 +1,76 @@
+@use "../../base/globals.scss" as s;
+
+.card-tabs {
+  @include s.d-flex($direction: column);
+  &__list {
+		// margin: 0 257px;
+    @include s.d-flex(
+      $direction: row,
+      $align: center,
+      $justify: space-between,
+      $wrap: wrap
+    );
+    gap: 40px;
+    &-item {
+      cursor: pointer;
+      position: relative;
+      @include s.d-flex($direction: row, $align: center);
+      gap: 14px;
+
+      // &.payment-item-one {
+      //   max-width: 205px;
+      //   margin-right: 113px;
+      // }
+      // &.payment-item-two {
+      //   max-width: 250px;
+      //   margin-right: 113px;
+      // }
+      // &.payment-item-three {
+      //   margin-bottom: 20px;
+      //   max-width: 240px;
+      // }
+      p {
+        font-family: s.$font__rel;
+        font-weight: 600;
+        font-size: 18px;
+        color: #5b5b5b;
+
+        transition: all 0.5s ease;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        margin-left: -26px;
+        margin-right: -26px;
+
+        width: 100%;
+        height: 3px;
+
+        background-color: s.$color__green-dark;
+
+        opacity: 0;
+
+        transition: opacity 0.5s ease;
+      }
+      &:hover {
+        p {
+          font-weight: 700;
+          font-size: 18px;
+          color: s.$color__blue-dark;
+        }
+      }
+      &.active {
+        p {
+          font-weight: 700;
+          font-size: 18px;
+          color: s.$color__blue-dark;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
