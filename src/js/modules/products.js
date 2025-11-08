@@ -42,6 +42,10 @@ function renderProducts(data, container) {
     const item = document.createElement("div");
     item.classList.add("products__item");
 
+    item.addEventListener("click", () => {
+      window.location.href = "card.html";
+    });
+    
     let flag = "";
     if (product.promo?.type === "sale") {
       flag = `
@@ -322,7 +326,6 @@ if (productContainer) {
 
       renderProducts(filtered, productContainer);
     });
-
 
     //  кнопка RESET
     resetBtnCatalog.addEventListener("click", () => {
