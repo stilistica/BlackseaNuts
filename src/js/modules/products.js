@@ -45,7 +45,7 @@ function renderProducts(data, container) {
     item.addEventListener("click", () => {
       window.location.href = "card.html";
     });
-    
+
     let flag = "";
     if (product.promo?.type === "sale") {
       flag = `
@@ -175,8 +175,8 @@ function renderProducts(data, container) {
     buyBtn.addEventListener("click", () => {
       let basket = getBasket();
 
-      const exists = basket.some((el) => el.id === product.id);
-      if (exists) return;
+      // const exists = basket.some((el) => el.id === product.id);
+      // if (exists) return;
 
       basket.push(product);
       setBasket(basket);
@@ -210,17 +210,6 @@ function renderProducts(data, container) {
           const x = ((e.clientX - rect.left) / rect.width) * 100;
           const y = ((e.clientY - rect.top) / rect.height) * 100;
           this.image.style.transformOrigin = `${x}% ${y}%`;
-
-          const buffer = 25;
-          const outside =
-            e.clientX < rect.left - buffer ||
-            e.clientX > rect.right + buffer ||
-            e.clientY < rect.top - buffer ||
-            e.clientY > rect.bottom + buffer;
-
-          if (outside && this.zoomEnabled) {
-            this.disableZoom();
-          }
         });
       }
 
@@ -244,6 +233,16 @@ function renderProducts(data, container) {
 
     const zoomBlocks = item.querySelectorAll(".products__item-image");
     zoomBlocks.forEach((block) => new ImageZoom(block));
+
+    const zoomBtn = item.querySelector(".products__item-image-zoom");
+    const nextBtn = item.querySelector(".products__item-image-buttons-next");
+    const prevBtn = item.querySelector(".products__item-image-buttons-prev");
+
+    [buyBtn, zoomBtn, nextBtn, prevBtn].forEach((btn) => {
+      if (btn) {
+        btn.addEventListener("click", (e) => e.stopPropagation());
+      }
+    });
   });
 }
 
