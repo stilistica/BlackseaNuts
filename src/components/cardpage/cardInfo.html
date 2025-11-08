@@ -1,76 +1,88 @@
-<!-- <section class="container card-info">
-  <div class="card-info__swiper">
-    <div class="swiper-wrapper">
-      <div class="card-info__swiper-item swiper-slide">
-        <img src="../img/components/cardpage/image-info.png" alt="${product.name}" class="card-info__swiper-item-img" />
-        <svg class="card-info__swiper-item-zoom">
-          <use href="../img/sprite.svg#icon-zoom"></use>
-        </svg>
+<section class="container">
+  <div class="breadcrumbs breadcrumbs-gray"></div>
+
+  <div class="card-info">
+    <div class="card-info__swiper">
+      <div class="swiper-wrapper">
+        <div class="card-info__swiper-item swiper-slide">
+          <img
+            src="../img/components/cardpage/image-info.png"
+            alt="${product.name}"
+            class="card-info__swiper-item-img"
+          />
+          <svg class="card-info__swiper-item-zoom">
+            <use href="../img/sprite.svg#icon-zoom"></use>
+          </svg>
+        </div>
+        <div class="card-info__swiper-item swiper-slide">
+          <img
+            src="../img/components/cardpage/image-info.png"
+            alt="${product.name}"
+            class="card-info__swiper-item-img"
+          />
+          <svg class="card-info__swiper-item-zoom">
+            <use href="../img/sprite.svg#icon-zoom"></use>
+          </svg>
+        </div>
       </div>
-      <div class="card-info__swiper-item swiper-slide">
-        <img src="../img/components/cardpage/image-info.png" alt="${product.name}" class="card-info__swiper-item-img" />
-        <svg class="card-info__swiper-item-zoom">
-          <use href="../img/sprite.svg#icon-zoom"></use>
-        </svg>
+      <div class="card-info__swiper-buttons">
+        <button class="card-info__swiper-buttons-prev">
+          <svg>
+            <use href="../img/sprite.svg#icon-left-arrow"></use>
+          </svg>
+        </button>
+        <button class="card-info__swiper-buttons-next">
+          <svg>
+            <use href="../img/sprite.svg#icon-right-arrow"></use>
+          </svg>
+        </button>
       </div>
     </div>
-    <div class="card-info__swiper-buttons">
-      <button class="card-info__swiper-buttons-prev">
+    <div class="card-info__text">
+      <div class="card-info__text-one">
+        <p>Грецкий орех</p>
+        <span>Арт: 0091</span>
+      </div>
+      <h1 class="card-info__text-title">Орех соленый кондитерский очищенный</h1>
+      <ul class="card-info__text-list">
+        <li>
+          <h3>Состав:</h3>
+          <p>
+            Ядро грецкого ореха, вымытого очищенного<br />
+            от кожуры, соль экстра (раствор 7%)
+          </p>
+        </li>
+        <li>
+          <h3>Масса нетто:</h3>
+          <p>40г.</p>
+        </li>
+        <li>
+          <h3>Энергетическая ценность:</h3>
+          <p>654 Ккал.</p>
+        </li>
+        <li>
+          <h3>Срок годности:</h3>
+          <p>12 месяцев, с даты расфасовки<br/> (указана на упаковке)</p>
+        </li>
+      </ul>
+      <div class="card-info__text-precedence">
         <svg>
-          <use href="../img/sprite.svg#icon-left-arrow"></use>
+          <use href="../img/sprite.svg#icon-warning"></use>
         </svg>
-      </button>
-      <button class="card-info__swiper-buttons-next">
-        <svg>
-          <use href="../img/sprite.svg#icon-right-arrow"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div class="card-info__text">
-    <div class="card-info__text-one">
-      <p>Грецкий орех</p>
-      <span>Арт: 0091</span>
-    </div>
-    <h1 class="card-info__text-title">Орех соленый кондитерский очищенный</h1>
-    <ul class="card-info__text-list">
-      <li>
-        <h3>Состав:</h3>
         <p>
-          Ядро грецкого ореха, вымытого очищенного от кожуры, соль экстра
-          (раствор 7%)
+          Хранить в помещениях, защищенных от попадания прямых, солнечных лучей,
+          при температуре от +3 °C до +20 °C, и относительной влажности воздуха
+          не более 75 %
         </p>
-      </li>
-      <li>
-        <h3>Масса нетто:</h3>
-        <p>40г.</p>
-      </li>
-      <li>
-        <h3>Энергетическая ценность:</h3>
-        <p>654 Ккал.</p>
-      </li>
-      <li>
-        <h3>Срок годности:</h3>
-        <p>12 месяцев, с даты расфасовки (указана на упаковке)</p>
-      </li>
-    </ul>
-    <div class="card-info__precedence">
-      <svg>
-        <use href="../img/sprite.svg#icon-entrance"></use>
-      </svg>
-      <p>
-        Хранить в помещениях, защищенных от попадания прямых, солнечных лучей,
-        при температуре от +3 °C до +20 °C, и относительной влажности воздуха не
-        более 75 %
-      </p>
+      </div>
+      <div class="card-info__text-ends">
+        <div class="card-info__text-ends-price">
+          <h2>Ваша цена:</h2>
+          <p class="card-info__text-ends-price-new">19 <span>грн.</span></p>
+          <p class="card-info__text-ends-price-old">21 <span>грн.</span></p>
+        </div>
+        <button>Заказать</button>
+      </div>
     </div>
-		<div class="card-info__ends">
-			<div class="card-info__ends-price">
-				<h2>Ваша цена:</h2>
-				<p>19 грн.</p>
-				<span>21 грн.</span>
-			</div>
-			<button>Заказать</button>
-		</div>
   </div>
-</section> -->
+</section>
