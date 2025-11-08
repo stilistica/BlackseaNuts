@@ -5,10 +5,14 @@ import "swiper/css/pagination";
 
 import SimpleBar from 'simplebar';
 import 'simplebar-core/dist/simplebar.css';
+const catalogSwiperInfoDesc = document.querySelector('.catalog-swiper__info-desc');
+if (catalogSwiperInfoDesc) {
   new SimpleBar(document.querySelector(".catalog-swiper__info-desc"), {
     autoHide: false,
     scrollbarMaxSize: 38,
   });
+}
+
 
 const containerManufacturer = document.querySelector(
   ".catalog-swiper__images-swiper"
