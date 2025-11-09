@@ -1,51 +1,33 @@
 @use "../../base/globals.scss" as s;
 
 .card-tabs {
+  padding-bottom: 89px;
   @include s.d-flex($direction: column);
   &__list {
-		// margin: 0 257px;
-    @include s.d-flex(
-      $direction: row,
-      $align: center,
-      $justify: space-between,
-      $wrap: wrap
-    );
+    @include s.d-flex($direction: column, $align: center);
     gap: 40px;
     &-item {
+      width: 90px;
+
       cursor: pointer;
       position: relative;
-      @include s.d-flex($direction: row, $align: center);
+      @include s.d-flex($direction: row, $align: center, $justify: center);
       gap: 14px;
-
-      // &.payment-item-one {
-      //   max-width: 205px;
-      //   margin-right: 113px;
-      // }
-      // &.payment-item-two {
-      //   max-width: 250px;
-      //   margin-right: 113px;
-      // }
-      // &.payment-item-three {
-      //   margin-bottom: 20px;
-      //   max-width: 240px;
-      // }
       p {
         font-family: s.$font__rel;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 16px;
         color: #5b5b5b;
+        text-align: center;
 
         transition: all 0.5s ease;
       }
       &::after {
         content: "";
         position: absolute;
-        bottom: -20px;
-        left: 0;
-        margin-left: -26px;
-        margin-right: -26px;
+        bottom: -19px;
 
-        width: 100%;
+        width: 144px;
         height: 3px;
 
         background-color: s.$color__green-dark;
@@ -69,6 +51,129 @@
         }
         &::after {
           opacity: 1;
+        }
+      }
+    }
+  }
+  hr {
+    margin: 18px 0 55px 0;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    width: 100%;
+  }
+  &__info {
+    @include s.d-flex($direction: column, $align: center);
+    gap: 20px;
+    &-img {
+      width: 100%;
+      height: 400px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-text {
+      margin-top: 5px;
+      @include s.d-flex($direction: column);
+      gap: 13px;
+      p {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.66667;
+        &:first-child {
+          max-width: 760px;
+        }
+        span {
+          font-weight: 600;
+          color: s.$color__green-dark;
+        }
+      }
+      h3 {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 1.18667;
+      }
+      ul {
+        @include s.d-flex($direction: column);
+        li {
+          position: relative;
+
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 1.9;
+
+          padding-left: 20px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: s.$color__green;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: s.$media_768) {
+    &__list {
+      @include s.d-flex(
+        $direction: row,
+        $align: center,
+        $justify: space-between,
+        $wrap: wrap
+      );
+    }
+    &__info {
+      &-img {
+        width: 100%;
+        height: 400px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    &__list {
+      padding: 0 400px;
+      &-item {
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+    &__info {
+      @include s.d-flex(
+        $direction: row,
+        $align: center,
+        $justify: space-between
+      );
+      &-img {
+        width: 409px;
+        height: 503px;
+      }
+      &-text {
+        width: 580px;
+      }
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    &__list {
+      padding: 0 600px;
+    }
+    &__info {
+      gap: none;
+      &-text {
+        width: 819px;
+        p {
+          &:first-child {
+            max-width: 760px;
+          }
         }
       }
     }

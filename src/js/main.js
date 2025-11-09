@@ -16,5 +16,6 @@ import "./modules/paymentTabs.js";
 import "./modules/catalogSwiper.js";
 
 import "./modules/cardInfo.js";
+import "./modules/cardTabs.js";
 
 import "./modules/heroVideo.js";
