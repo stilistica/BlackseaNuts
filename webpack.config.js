@@ -58,6 +58,22 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'pages', 'card.html'),
       filename: "card.html",
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'register.html'),
+      filename: "register.html",
+    }),
+    // new HtmlWebpackPlugin({
+    //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
+    //   filename: "index.html",
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
+    //   filename: "index.html",
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
+    //   filename: "index.html",
+    // }),
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
     //   filename: "index.html",

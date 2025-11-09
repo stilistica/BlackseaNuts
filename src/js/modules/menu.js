@@ -26,7 +26,7 @@ function openModal() {
           </svg>
           Вход
         </a>
-        <a href="#" class="header-mob-burger__two-acc-reg">Регистрация</a>
+        <a href="register.html" class="header-mob-burger__two-acc-reg">Регистрация</a>
       </div>
       <ul class="header-mob-burger__two-soc">
         <li>
@@ -53,11 +53,11 @@ function openModal() {
       </ul>
     </div>
     <nav class="header-mob-burger__three">
-      <a href="./about.html" aria-label="link">Магазин</a>
-      <a href="./about.html" aria-label="link">О производстве</a>
-      <a href="./about.html" aria-label="link">Оплата и доставка</a>
-      <a href="./about.html" aria-label="link">Оптовым и корпоративным клиентам</a>
-      <a href="./about.html" aria-label="link">Новости и статьи</a>
+      <a href="catalog.html" aria-label="link">Магазин</a>
+      <a href="about.html" aria-label="link">О производстве</a>
+      <a href="payment.html" aria-label="link">Оплата и доставка</a>
+      <a href="corporate.html" aria-label="link">Оптовым и корпоративным клиентам</a>
+      <a href="articles.html" aria-label="link">Новости и статьи</a>
       <a href="./about.html" aria-label="link">Контакты</a>
     </nav>`;
   // document.body.appendChild(modal);

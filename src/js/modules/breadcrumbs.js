@@ -14,6 +14,8 @@ if (breadcrumbsContainer) {
     "gallery.html": "Галерея",
     "catalog.html": "Магазин",
     "card.html": "Карточка товара",
+    "register.html": "Регистрация",
+    // "corporate.html": "Оптовым и корпоративным клиентам",
     // "corporate.html": "Оптовым и корпоративным клиентам",
     // "corporate.html": "Оптовым и корпоративным клиентам",
   };
