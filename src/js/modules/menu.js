@@ -20,7 +20,7 @@ function openModal() {
     </div>
     <div class="header-mob-burger__two">
       <div class="header-mob-burger__two-acc">
-        <a href="#" class="header-mob-burger__two-acc-exit">
+        <a href="login.html" class="header-mob-burger__two-acc-exit">
           <svg>
             <use href="${sprite}#icon-entrance"></use>
           </svg>
