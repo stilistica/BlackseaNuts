@@ -16,7 +16,7 @@ if (breadcrumbsContainer) {
     "card.html": "Карточка товара",
     "register.html": "Регистрация",
     "login.html": "Вход",
-    // "corporate.html": "Оптовым и корпоративным клиентам",
+    "forgotPassword.html": "Восстановление пароля",
     // "corporate.html": "Оптовым и корпоративным клиентам",
     // "corporate.html": "Оптовым и корпоративным клиентам",
   };

@@ -66,10 +66,10 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'pages', 'login.html'),
       filename: "login.html",
     }),
-    // new HtmlWebpackPlugin({
-    //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
-    //   filename: "index.html",
-    // }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'forgotPassword.html'),
+      filename: "forgotPassword.html",
+    }),
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
     //   filename: "index.html",
