@@ -8,22 +8,26 @@
   gap: 20px;
 
   &__title {
-    margin-left: -4px;
+    // margin-left: -4px;
 
     font-family: s.$font__rel;
     font-weight: 800;
-    font-size: 32px;
+    // font-size: 32px;
+    font-size: 25px;
     line-height: 1;
     letter-spacing: 0.01em;
   }
   &-container {
-    margin-left: -3px;
+    // margin-left: -3px;
 
-    @include s.d-flex($direction: row);
-    gap: 268px;
+    // @include s.d-flex($direction: row);
+    @include s.d-flex($direction: column-reverse);
+    // gap: 268px;
+    gap: 48px;
 
     &__one {
-      width: 474px;
+      // width: 474px;
+      width: 100%;
       box-sizing: border-box;
       @include s.d-flex($direction: column);
       &-contact {
@@ -39,11 +43,14 @@
         }
         &-tabs {
           box-sizing: border-box;
-          @include s.d-flex(
-            $direction: row,
-            $justify: space-between,
-            $align: center
-          );
+          // @include s.d-flex(
+          //   $direction: row,
+          //   $justify: space-between,
+          //   $align: center
+          // );
+          @include s.d-flex($direction: column, $align: center);
+          // gap: none;
+          gap: 40px;
           padding: 0 45px 13px 33px;
 
           width: 100%;
@@ -327,13 +334,15 @@
         gap: 10px;
 
         font-weight: 500;
-        font-size: 13px;
+        // font-size: 13px;
+        font-size: 11px;
         line-height: 2.46154;
         letter-spacing: 0.01em;
         color: #8a8a8a;
         span {
           font-weight: 600;
-          font-size: 13px;
+          // font-size: 13px;
+          font-size: 11px;
           line-height: 2.46154;
           letter-spacing: 0.01em;
           color: s.$color__green-dark;
@@ -425,7 +434,8 @@
       }
       &-other {
         margin-top: 33px;
-        width: 474px;
+        // width: 474px;
+        width: 100%;
 
         &-variant {
           margin-left: -2px;
@@ -640,6 +650,68 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  @media (min-width: s.$media_768) {
+    &-container {
+      @include s.d-flex($direction: row);
+      gap: 48px;
+
+      &__one {
+        max-width: 474px;
+
+        &-conditions {
+          font-size: 13px;
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    &__title {
+      margin-left: -4px;
+      font-size: 32px;
+    }
+    &-container {
+      margin-left: -3px;
+
+      @include s.d-flex($direction: row);
+      gap: 168px;
+
+      &__one {
+        max-width: none;
+        width: 474px;
+
+        &-contact {
+          &-tabs {
+            @include s.d-flex(
+              $direction: row,
+              $justify: space-between,
+              $align: center
+            );
+            gap: none;
+          }
+        }
+      }
+      &__two {
+        &-other {
+          width: 274px;
+        }
+      }
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    &-container {
+      gap: 268px;
+
+      &__two {
+        &-other {
+          width: 474px;
         }
       }
     }
