@@ -18,4 +18,6 @@ import "./modules/catalogSwiper.js";
 import "./modules/cardInfo.js";
 import "./modules/cardTabs.js";
 
+import "./modules/register.js";
+
 import "./modules/heroVideo.js";

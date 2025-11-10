@@ -1,5 +1,124 @@
 <section class="container">
   <div class="breadcrumbs breadcrumbs-gray"></div>
 
-  <div class="register"></div>
+  <div class="register">
+    <h1 class="register__title">Регистрация</h1>
+    <div class="register-container">
+      <div class="register-container__one">
+        <div class="register-container__one-contact">
+          <h2 class="register-container__one-contact-title">
+            1. Контактные данные
+          </h2>
+          <ul class="register-container__one-contact-tabs">
+            <li>Физическое лицо</li>
+            <li>Юридическое лицо</li>
+          </ul>
+          <div class="register-container__one-contact-forms">
+            <input
+              type="text"
+              name="nameRegister"
+              placeholder="ФИО*"
+              required
+            />
+            <input
+              type="email"
+              name="emailRegister"
+              placeholder="Email*"
+              required
+            />
+            <input
+              type="tel"
+              name="phoneRegister"
+              placeholder="Телефон*"
+              required
+            />
+          </div>
+        </div>
+        <div class="register-container__one-adress">
+          <h2 class="register-container__one-adress-title">2. Адрес</h2>
+          <div class="register-container__one-adress-forms">
+            <div class="register-container__one-adress-forms-input-country">
+              <div
+                class="register-container__one-adress-forms-input-country-active"
+              >
+                <p>Страна</p>
+                <svg>
+                  <use href="../img/sprite.svg#icon-arrow-b"></use>
+                </svg>
+              </div>
+              <ul
+                class="register-container__one-adress-forms-input-country-variant"
+              >
+                <li>Украина</li>
+                <hr />
+                <li>Польша</li>
+                <hr />
+                <li>Молдова</li>
+              </ul>
+            </div>
+            <div class="register-container__one-adress-forms-input-region">
+              <div
+                class="register-container__one-adress-forms-input-region-active"
+              >
+                <p>Область</p>
+                <svg>
+                  <use href="../img/sprite.svg#icon-arrow-b"></use>
+                </svg>
+              </div>
+              <ul
+                class="register-container__one-adress-forms-input-region-variant"
+              >
+                <li>Киевская</li>
+                <hr />
+                <li>Одесская</li>
+              </ul>
+            </div>
+            <input
+              type="text"
+              name="cityRegister"
+              placeholder="Город*"
+              required
+            />
+            <input type="text" name="adressRegister" placeholder="Адрес" />
+          </div>
+        </div>
+        <div class="register-container__one-password">
+          <h2 class="register-container__one-password-title">3. Пароль</h2>
+          <div class="register-container__one-password-forms">
+            <input
+              type="password"
+              name="passwordRegister"
+              placeholder="Пароль*"
+              required
+            />
+            <input
+              type="password"
+              name="passwordRegister"
+              placeholder="Подтвердите пароль*"
+              required
+            />
+          </div>
+        </div>
+        <label class="register-container__one-conditions">
+          <input type="checkbox" name="conditions" />
+          Я согласен с <span>Условиями регистрации</span>
+        </label>
+        <a
+          href="#"
+          aria-label="go to account"
+          class="register-container__one-link"
+          >Продолжить</a
+        >
+      </div>
+      <div class="register-container__two">
+        <div class="register-container__two-img">
+          <img src="../img/components/register/image.png" alt="photo" />
+          <p>Загрузить фото</p>
+        </div>
+        <div class="register-container__two-variant"></div>
+        <div class="register-container__two-other">
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

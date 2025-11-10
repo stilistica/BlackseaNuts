@@ -51,3 +51,39 @@
     color: v.$color__white;
   }
 }
+
+@mixin input-reg() {
+  box-sizing: border-box;
+  height: 47px;
+
+  padding: 16px 18px;
+
+  background: v.$color__white;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21429;
+
+  transition: all 0.5s ease;
+
+
+  @content;
+  
+  &::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21429;
+    color: v.$color__blue-dark;
+  }
+
+  &:hover {
+    background: rgba(51, 125, 90, 0.1);
+  }
+
+  &:focus {
+    outline: none;
+
+    border: 1.5px solid #337d5a;
+  }
+}
