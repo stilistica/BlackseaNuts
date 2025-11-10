@@ -61,7 +61,7 @@ const containerVariantRegister = document.querySelector(
   ".register-container__two-other"
 );
 
-if (tabsRegister && tabsRegister) {
+if (tabsRegister.length > 0 && tabsRegister && tabsRegister) {
   tabsRegister[0].classList.add("active");
   containerTabsRegister.innerHTML = `
     <label class="register-container__two-variant-fiz">
@@ -389,15 +389,17 @@ if (tabsRegister && tabsRegister) {
     });
   });
 }
-const photoContainerRegister = document.querySelector(".register-container__two-img");
-const img = photoContainerRegister.querySelector("img");
-const uploadText = photoContainerRegister.querySelector("p");
-const fileInput = photoContainerRegister.querySelector("input[type='file']");
-
+const photoContainerRegister = document.querySelector(
+  ".register-container__two-img"
+);
 if (photoContainerRegister) {
+  const img = photoContainerRegister.querySelector("img");
+  const uploadText = photoContainerRegister.querySelector("p");
+  const fileInput = photoContainerRegister.querySelector("input[type='file']");
+
   uploadText.addEventListener("click", () => {
     fileInput.click();
-  })
+  });
 
   fileInput.addEventListener("change", (el) => {
     const file = el.target.files[0];
@@ -408,5 +410,5 @@ if (photoContainerRegister) {
       };
       render.readAsDataURL(file);
     }
-  })
+  });
 }
