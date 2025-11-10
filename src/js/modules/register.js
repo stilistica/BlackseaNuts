@@ -198,7 +198,7 @@ if (tabsRegister && tabsRegister) {
             ".register-container__two-other-ur-adress-forms-region-variant li"
           );
         }
-        
+
         const radioButtons = containerTabsRegister.querySelectorAll(
           'input[name="personType"]'
         );
@@ -388,4 +388,25 @@ if (tabsRegister && tabsRegister) {
       }
     });
   });
+}
+const photoContainerRegister = document.querySelector(".register-container__two-img");
+const img = photoContainerRegister.querySelector("img");
+const uploadText = photoContainerRegister.querySelector("p");
+const fileInput = photoContainerRegister.querySelector("input[type='file']");
+
+if (photoContainerRegister) {
+  uploadText.addEventListener("click", () => {
+    fileInput.click();
+  })
+
+  fileInput.addEventListener("change", (el) => {
+    const file = el.target.files[0];
+    if (file) {
+      const render = new FileReader();
+      render.onload = function (e) {
+        img.src = e.target.result;
+      };
+      render.readAsDataURL(file);
+    }
+  })
 }
