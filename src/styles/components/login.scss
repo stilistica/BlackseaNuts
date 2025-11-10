@@ -1,0 +1,5 @@
+@use "../base/globals.scss" as s;
+
+.login {
+  @include s.d-flex($direction: column, $align: center);
+}
