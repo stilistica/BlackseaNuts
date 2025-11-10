@@ -177,6 +177,28 @@ if (tabsRegister && tabsRegister) {
           </div>
         `;
 
+        const countryActiveOne = document.querySelector(
+          ".register-container__two-other-ur-adress-forms-country-active"
+        );
+        const regionActiveOne = document.querySelector(
+          ".register-container__two-other-ur-adress-forms-region-active"
+        );
+
+        if (countryActiveOne) {
+          initCustomSelectRegister(
+            ".register-container__two-other-ur-adress-forms-country-active",
+            ".register-container__two-other-ur-adress-forms-country-variant",
+            ".register-container__two-other-ur-adress-forms-country-variant li"
+          );
+        }
+        if (regionActiveOne) {
+          initCustomSelectRegister(
+            ".register-container__two-other-ur-adress-forms-region-active",
+            ".register-container__two-other-ur-adress-forms-region-variant",
+            ".register-container__two-other-ur-adress-forms-region-variant li"
+          );
+        }
+        
         const radioButtons = containerTabsRegister.querySelectorAll(
           'input[name="personType"]'
         );
@@ -250,6 +272,27 @@ if (tabsRegister && tabsRegister) {
             </div>
           </div>
               `;
+              const countryActiveOne = document.querySelector(
+                ".register-container__two-other-ur-adress-forms-country-active"
+              );
+              const regionActiveOne = document.querySelector(
+                ".register-container__two-other-ur-adress-forms-region-active"
+              );
+
+              if (countryActiveOne) {
+                initCustomSelectRegister(
+                  ".register-container__two-other-ur-adress-forms-country-active",
+                  ".register-container__two-other-ur-adress-forms-country-variant",
+                  ".register-container__two-other-ur-adress-forms-country-variant li"
+                );
+              }
+              if (regionActiveOne) {
+                initCustomSelectRegister(
+                  ".register-container__two-other-ur-adress-forms-region-active",
+                  ".register-container__two-other-ur-adress-forms-region-variant",
+                  ".register-container__two-other-ur-adress-forms-region-variant li"
+                );
+              }
             } else if (e.target.value === "fop") {
               containerVariantRegister.innerHTML = `
                         <div class="register-container__two-other-fop register-container__two-other-variant">
@@ -317,31 +360,31 @@ if (tabsRegister && tabsRegister) {
               </div>
             </div>
           </div>`;
+
+              const countryActiveTwo = document.querySelector(
+                ".register-container__two-other-fop-adress-forms-country-active"
+              );
+              const regionActiveTwo = document.querySelector(
+                ".register-container__two-other-fop-adress-forms-region-active"
+              );
+
+              if (countryActiveTwo) {
+                initCustomSelectRegister(
+                  ".register-container__two-other-fop-adress-forms-country-active",
+                  ".register-container__two-other-fop-adress-forms-country-variant",
+                  ".register-container__two-other-fop-adress-forms-country-variant li"
+                );
+              }
+              if (regionActiveTwo) {
+                initCustomSelectRegister(
+                  ".register-container__two-other-fop-adress-forms-region-active",
+                  ".register-container__two-other-fop-adress-forms-region-variant",
+                  ".register-container__two-other-fop-adress-forms-region-variant li"
+                );
+              }
             }
           });
         });
-
-        const countryActiveOne = document.querySelector(
-          ".register-container__two-other-ur-adress-forms-country-active"
-        );
-        const regionActiveOne = document.querySelector(
-          ".register-container__two-other-ur-adress-forms-region-active"
-        );
-
-        if (countryActiveOne) {
-          initCustomSelectRegister(
-            ".register-container__two-other-ur-adress-forms-country-active",
-            ".register-container__two-other-ur-adress-forms-country-variant",
-            ".register-container__two-other-ur-adress-forms-country-variant li"
-          );
-        }
-        if (regionActiveOne) {
-          initCustomSelectRegister(
-            ".register-container__two-other-ur-adress-forms-region-active",
-            ".register-container__two-other-ur-adress-forms-region-variant",
-            ".register-container__two-other-ur-adress-forms-region-variant li"
-          );
-        }
       }
     });
   });

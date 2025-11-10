@@ -645,3 +645,23 @@
     }
   }
 }
+.register-container__two-other-ur-adress-forms-country-variant {
+  &.active {
+    @include s.d-flex($direction: column);
+  }
+}
+.register-container__two-other-ur-adress-forms-region-variant {
+  &.active {
+    @include s.d-flex($direction: column);
+  }
+}
+.register-container__two-other-fop-adress-forms-country-variant {
+  &.active {
+    @include s.d-flex($direction: column);
+  }
+}
+.register-container__two-other-fop-adress-forms-region-variant {
+  &.active {
+    @include s.d-flex($direction: column);
+  }
+}
