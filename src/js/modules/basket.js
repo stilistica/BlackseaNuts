@@ -50,7 +50,7 @@ if (basketDivs) {
         basketList.appendChild(item);
       });
 
-      basketTotal.innerHTML  = `${total} <span>грн.</span>`;
+      basketTotal.innerHTML = `${total} <span>грн.</span>`;
     }
 
     btn.addEventListener("click", (e) => {
@@ -93,4 +93,66 @@ if (basketDivs) {
       renderBasketItems();
     });
   });
+}
+
+const basketBody = document.querySelector(".basket-table-body");
+if (basketBody) {
+  function renderBasketTable() {
+    const basket = getBasket();
+    basketBody.innerHTML = "";
+
+    basket.forEach((product, index) => {
+      const quantity = product.quantity || 1;
+      const itemTotal = product.price * quantity;
+
+      const tr = document.createElement("tr");
+      tr.classList.add("basket-table-body-item");
+
+      tr.innerHTML = ` 
+    <td class="basket-table-body-item-name">
+      ${product.name} ${product.weight}г.
+    </td>
+    <td class="basket-table-body-item-number">
+        <svg class="basket-decrease" data-index="${index}">
+          <use href="../img/sprite.svg#icon-decrease"></use>
+        </svg>
+        <span>${quantity}</span>
+        <svg class="basket-increase" data-index="${index}">
+          <use href="../img/sprite.svg#icon-increase"></use>
+        </svg>
+    </td>
+    <td class="basket-table-body-item-price">${product.price} грн.</td>
+    <td class="basket-table-body-item-total">${itemTotal} грн.</td>
+      `;
+
+      basketBody.appendChild(tr);
+    });
+  }
+
+  basketBody.addEventListener("click", (e) => {
+    const basket = getBasket();
+    const incBtn = e.target.closest(".basket-increase");
+    const decBtn = e.target.closest(".basket-decrease");
+    const delBtn = e.target.closest(".basket-delete");
+
+    if (incBtn) {
+      const index = incBtn.dataset.index;
+      basket[index].quantity = (basket[index].quantity || 1) + 1;
+    }
+
+    if (decBtn) {
+      const index = decBtn.dataset.index;
+      if (basket[index].quantity > 1) basket[index].quantity--;
+    }
+
+    if (delBtn) {
+      const index = delBtn.dataset.index;
+      basket.splice(index, 1);
+    }
+
+    setBasket(basket);
+    renderBasketTable();
+  });
+
+  renderBasketTable();
 }
