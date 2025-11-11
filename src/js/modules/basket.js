@@ -105,14 +105,14 @@ if (basketBody) {
       const quantity = product.quantity || 1;
       const itemTotal = product.price * quantity;
 
-      const tr = document.createElement("tr");
+      const tr = document.createElement("div");
       tr.classList.add("basket-table-body-item");
 
       tr.innerHTML = ` 
-    <td class="basket-table-body-item-name">
+    <h3 class="basket-table-body-item-name">
       ${product.name} ${product.weight}г.
-    </td>
-    <td class="basket-table-body-item-number">
+    </h3>
+    <div class="basket-table-body-item-number">
         <svg class="basket-decrease" data-index="${index}">
           <use href="../img/sprite.svg#icon-decrease"></use>
         </svg>
@@ -120,9 +120,9 @@ if (basketBody) {
         <svg class="basket-increase" data-index="${index}">
           <use href="../img/sprite.svg#icon-increase"></use>
         </svg>
-    </td>
-    <td class="basket-table-body-item-price">${product.price} грн.</td>
-    <td class="basket-table-body-item-total">${itemTotal} грн.</td>
+    </div>
+    <p class="basket-table-body-item-price">${product.price} грн.</p>
+    <p class="basket-table-body-item-total">${itemTotal} грн.</p>
       `;
 
       basketBody.appendChild(tr);
@@ -155,4 +155,22 @@ if (basketBody) {
   });
 
   renderBasketTable();
+}
+
+function getTotalPrice(container) {
+  const basket = getBasket();
+
+  const total = basket.reduce((sum, product) => {
+    const quantity = product.quantity || 1;
+    return sum + product.price * quantity;
+  }, 0);
+
+  container.innerHTML = `${total} <span>грн.</span>`;
+}
+const totalElementBasketPage = document.querySelector(
+  ".basketpage__next-inner-total"
+);
+
+if (totalElementBasketPage) {
+  getTotalPrice(totalElementBasketPage)
 }

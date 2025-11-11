@@ -3,6 +3,7 @@
 .basket-div {
   position: relative;
   & .basket-popup {
+    z-index: 12;
     width: 468px;
 
     position: absolute;
@@ -95,7 +96,7 @@
       gap: 10px;
       p {
         @include s.d-flex($direction: row, $align: center);
-				gap: 10px;
+        gap: 10px;
         font-family: s.$font__rel;
         font-weight: 700;
         font-size: 18px;
@@ -129,6 +130,364 @@
 
     &.active {
       @include s.d-flex($direction: column);
+    }
+  }
+}
+
+.basketpage {
+  padding-top: 109px;
+  padding-bottom: 92px;
+  @include s.d-flex($direction: column);
+  &__info {
+    margin-bottom: 60px;
+    @include s.d-flex($direction: column);
+    gap: 40px;
+
+    h1 {
+      font-family: s.$font__rel;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 1;
+    }
+    &-desc {
+      @include s.d-flex($direction: column);
+      p {
+        font-family: s.$font__rel;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 2;
+      }
+      &-tel {
+        @include s.d-flex($direction: row, $align: center);
+        gap: 10px;
+        svg {
+          width: 12px;
+          height: 12px;
+          fill: s.$color__green-dark;
+        }
+        span {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 1.28571;
+          letter-spacing: 0.01em;
+          color: s.$color__green-dark;
+        }
+      }
+    }
+  }
+  &__next {
+    margin-top: 26px;
+    width: 100%;
+    // @include s.d-flex($direction: row, $align: center, $justify: space-between);
+    @include s.d-flex($direction: column, $align: center);
+    // gap: none;
+    gap: 20px;
+
+    &-back {
+      margin-left: -3px;
+      width: 247px;
+      height: 48px;
+      @include s.btn-wh-gr();
+      @include s.d-flex($direction: row, $align: center, $justify: center);
+      gap: 6px;
+
+      font-family: s.$font__mont;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.0625;
+      svg {
+        width: 14px;
+        height: 14px;
+        fill: s.$color__green-dark;
+
+        transition: fill 0.5s ease;
+      }
+      &:hover {
+        svg {
+          fill: s.$color__white;
+        }
+      }
+    }
+    &-inner {
+      // @include s.d-flex($direction: row, $align: center);
+      @include s.d-flex($direction: column);
+      gap: 26px;
+
+      p {
+        font-family: s.$font__rel;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.77778;
+        & .basketpage__next-inner-total {
+          font-family: s.$font__mont;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 1.45455;
+          color: #337d5a;
+          span {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 2.28571;
+          }
+        }
+      }
+      a {
+        width: 247px;
+        height: 48px;
+        @include s.btn-gr-wh();
+        @include s.d-flex($direction: row, $align: center, $justify: center);
+
+        font-family: s.$font__rel;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.0625;
+        color: #fff;
+      }
+    }
+  }
+  &__desc {
+    margin-top: 62px;
+    @include s.d-flex($direction: column, $align: center);
+    // gap: 6px;
+    gap: 16px;
+    h2 {
+      font-family: s.$font__rel;
+      font-weight: 800;
+      // font-size: 28px;
+      font-size: 22px;
+      line-height: 1.14286;
+      text-align: center;
+    }
+    p {
+      // @include s.d-flex($direction: row, $align: center);
+      @include s.d-flex($direction: column, $align: center);
+      gap: 6px;
+
+      font-family: s.$font__rel;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.77778;
+      letter-spacing: 0.01em;
+
+      a {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.77778;
+        letter-spacing: 0.01em;
+        color: s.$color__green-dark;
+
+        transition: color 0.5s ease;
+        &:hover {
+          color: s.$color__blue-dark;
+        }
+      }
+      & .basketpage__desc-register {
+        border-bottom: 1px solid s.$color__green-dark;
+      }
+    }
+  }
+
+  @media (min-width: s.$media_768) {
+    &__info {
+      margin-left: -2px;
+      @include s.d-flex($direction: row);
+      gap: 190px;
+    }
+    &__next {
+      @include s.d-flex(
+        $direction: row,
+        $align: center,
+        $justify: space-between
+      );
+      gap: none;
+
+      &-inner {
+        // @include s.d-flex($direction: row, $align: center);
+      }
+    }
+    &__desc {
+      margin-top: 62px;
+      @include s.d-flex($direction: column, $align: center);
+      gap: 6px;
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        @include s.d-flex($direction: row, $align: center);
+        gap: 6px;
+      }
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    &__next {
+      &-inner {
+        @include s.d-flex($direction: row, $align: center);
+      }
+    }
+  }
+}
+.basket-table {
+  @include s.d-flex($direction: column);
+  gap: 17px;
+
+  &-info {
+    // @include s.d-flex($direction: row, $align: center);
+    @include s.d-flex($direction: column);
+    &-th {
+      @include s.d-flex($direction: row, $align: center);
+      gap: 6px;
+      box-sizing: border-box;
+      font-family: s.$font__rel;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 2;
+      text-align: left;
+      color: #1a2f3f;
+      svg {
+        margin-top: 3px;
+        width: 10px;
+        height: 8px;
+      }
+    }
+  }
+  &-body {
+    @include s.d-flex($direction: column);
+
+    &-item {
+      @include s.d-flex($direction: column);
+      width: 100%;
+      padding: 15px 0 !important;
+
+      background: transparent;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+      transition: background 0.5s ease;
+      &-name {
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 2.28571;
+      }
+      &-number {
+        @include s.d-flex($direction: row, $align: center);
+        gap: 6px;
+        svg {
+          cursor: pointer;
+          width: 8px;
+          height: 10px;
+          fill: #8a8a8a;
+
+          transition: fill 0.5s ease;
+          &:hover {
+            fill: s.$color__green-dark;
+          }
+        }
+        span {
+          @include s.d-flex(
+            $direction: column,
+            $align: center,
+            $justify: center
+          );
+
+          box-sizing: border-box;
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          width: 44px;
+          height: 28px;
+
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 2.28571;
+        }
+      }
+      &-price {
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 2.28571;
+      }
+      &-total {
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 2.28571;
+      }
+      &:hover {
+        background: rgba(51, 125, 90, 0.1);
+      }
+    }
+  }
+
+  @media (min-width: s.$media_768) {
+    &-info {
+      @include s.d-flex(
+        $direction: row,
+        $align: center,
+        $justify: space-between
+      );
+    }
+    &-body {
+      &-item {
+        @include s.d-flex(
+          $direction: row,
+          $align: center,
+          $justify: space-between
+        );
+        &-name {
+          width: 130px;
+        }
+      }
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    &-info {
+      @include s.d-flex($direction: row, $align: center);
+      &-name {
+        padding-left: 22px;
+        width: 366px;
+      }
+      &-number {
+        padding-left: 22px;
+        width: 230px;
+      }
+      &-price {
+        padding-left: 22px;
+        width: 237px;
+      }
+      &-total {
+        padding-left: 22px;
+      }
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    &-info {
+      &-name {
+        width: 416px;
+      }
+      &-number {
+        width: 310px;
+      }
+      &-price {
+        width: 337px;
+      }
+    }
+    &-body {
+      &-item {
+        @include s.d-flex($direction: row, $align: center);
+        &-name {
+          padding-left: 22px;
+          width: 415px;
+        }
+        &-number {
+          margin-right: 270px;
+        }
+        &-price {
+          width: 100px;
+          margin-right: 265px;
+        }
+        &-total {
+          width: 100px;
+        }
+      }
     }
   }
 }
