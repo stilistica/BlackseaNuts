@@ -19,5 +19,6 @@ import "./modules/cardInfo.js";
 import "./modules/cardTabs.js";
 
 import "./modules/register.js";
+import "./modules/basket.js";
 
 import "./modules/heroVideo.js";

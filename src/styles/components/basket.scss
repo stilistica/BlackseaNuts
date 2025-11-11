@@ -1,0 +1,134 @@
+@use "../base/globals.scss" as s;
+
+.basket-div {
+  position: relative;
+  & .basket-popup {
+    width: 468px;
+
+    position: absolute;
+    right: 0;
+    top: 58px;
+
+    background: s.$color__white;
+    border: 1.5px solid s.$color__green-dark;
+
+    box-sizing: border-box;
+    padding: 30px 31px 25px 31px;
+
+    display: none;
+
+    &__list {
+      @include s.d-flex($direction: column);
+      gap: 14px;
+      &-item {
+        width: 100%;
+        @include s.d-flex($direction: row, $align: center);
+
+        gap: 35px;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding-bottom: 16px;
+
+        &-info {
+          width: 145px;
+
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 1.35714;
+        }
+        &-number {
+          @include s.d-flex($direction: row, $align: center);
+          gap: 7px;
+          svg {
+            cursor: pointer;
+            width: 8px;
+            height: 10px;
+            fill: #8a8a8a;
+
+            transition: fill 0.5s ease;
+            &:hover {
+              fill: s.$color__green-dark;
+            }
+          }
+          p {
+            @include s.d-flex(
+              $direction: column,
+              $align: center,
+              $justify: center
+            );
+
+            box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            width: 44px;
+            height: 28px;
+
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 2.28571;
+          }
+        }
+        &-price {
+          width: 60px;
+
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 2.28571;
+        }
+        &-delete {
+          cursor: pointer;
+
+          width: 12px;
+          height: 12px;
+          fill: #c4c4c4;
+
+          transition: fill 0.5s ease;
+
+          &:hover {
+            fill: s.$color__green-dark;
+          }
+        }
+      }
+    }
+    &__inner {
+      margin: 20px 0 0 auto;
+      @include s.d-flex($direction: row, $align: center);
+      gap: 10px;
+      p {
+        @include s.d-flex($direction: row, $align: center);
+				gap: 10px;
+        font-family: s.$font__rel;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.77778;
+        span {
+          font-family: s.$font__mont;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 1.45455;
+          color: s.$color__green-dark;
+          span {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 2.28571;
+          }
+        }
+      }
+      a {
+        @include s.d-flex($direction: column, $align: center, $justify: center);
+        @include s.btn-gr-wh();
+
+        width: 191px;
+        height: 50px;
+
+        font-family: s.$font__rel;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.0625;
+      }
+    }
+
+    &.active {
+      @include s.d-flex($direction: column);
+    }
+  }
+}

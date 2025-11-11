@@ -175,10 +175,14 @@ function renderProducts(data, container) {
     buyBtn.addEventListener("click", () => {
       let basket = getBasket();
 
-      // const exists = basket.some((el) => el.id === product.id);
-      // if (exists) return;
+      const exists = basket.find((el) => el.id === product.id);
+      if (exists) {
+        exists.quantity = (exists.quantity || 1) + 1;
+      } else {
+        product.quantity = 1;
+        basket.push(product);
+      };
 
-      basket.push(product);
       setBasket(basket);
       updateBasketCounter();
     });

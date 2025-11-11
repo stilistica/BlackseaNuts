@@ -6,7 +6,7 @@
       </svg>
       <a href="#"><span>+38 (044)</span> 750-50-11</a>
     </div>
-    <a  class="header-mob__first-order" href="#">Заказать звонок</a>
+    <a class="header-mob__first-order" href="#">Заказать звонок</a>
     <!-- Request a call -->
     <div class="header-mob__first-language">
       <span>Ru</span>
@@ -25,12 +25,15 @@
     <a href="./" aria-label="home" class="header-mob__two-logo">
       <img src="../img/logo-mob.svg" alt="logo" />
     </a>
-    <button class="header-mob__two-bag">
-      <svg>
-        <use href="../img/sprite.svg#icon-bag"></use>
-      </svg>
-      <span class="basket-calculator">0</span>
-    </button>
+    <div class="basket-div">
+      <button class="header-mob__two-bag basket-btn">
+        <svg>
+          <use href="../img/sprite.svg#icon-bag"></use>
+        </svg>
+        <span class="basket-calculator">0</span>
+      </button>
+      <div class="basket-popup"></div>
+    </div>
   </div>
   <div class="header-mob__three">
     <p>Ваша персональная скидка - 5%</p>
@@ -70,7 +73,9 @@
           </svg>
           Вход
         </a>
-        <a href="register.html" class="header-desk__first-info-acc-reg">Регистрация</a>
+        <a href="register.html" class="header-desk__first-info-acc-reg"
+          >Регистрация</a
+        >
       </div>
       <div class="header-desk__first-info-language">
         <span>Ru</span>
@@ -119,12 +124,15 @@
         <button>Заказать звонок</button>
         <p>Ждем Вашего звонка ежедневно с 9 до 18</p>
       </div>
-      <button class="header-desk__two-info-bag">
-        <svg>
-          <use href="../img/sprite.svg#icon-bag"></use>
-        </svg>
-        <span class="basket-calculator">0</span>
-      </button>
+      <div class="basket-div">
+        <button class="header-desk__two-info-bag basket-btn">
+          <svg>
+            <use href="../img/sprite.svg#icon-bag"></use>
+          </svg>
+          <span class="basket-calculator">0</span>
+        </button>
+        <div class="basket-popup"></div>
+      </div>
     </div>
   </div>
   <!-- <hr /> -->
@@ -132,8 +140,11 @@
     <a href="catalog.html" aria-label="link">Магазин</a>
     <a href="about.html" aria-label="about page">О производстве</a>
     <a href="payment.html" aria-label="link">Оплата и доставка</a>
-    <a href="corporate.html" aria-label="link">Оптовым и корпоративным клиентам</a>
+    <a href="corporate.html" aria-label="link"
+      >Оптовым и корпоративным клиентам</a
+    >
     <a href="articles.html" aria-label="link">Новости и статьи</a>
     <a href="#" aria-label="link">Контакты</a>
   </nav>
 </header>
+

@@ -10,7 +10,10 @@ export function updateBasketCounter() {
   const basketCounter = document.querySelectorAll(".basket-calculator");
   const basket = getBasket();
 
-  basketCounter.forEach((el) => (el.textContent = basket.length));
+  const totalCount = basket.reduce((sum, product) => {
+    return sum + (product.quantity || 1);
+  }, 0);
+  basketCounter.forEach((el) => (el.textContent = totalCount));
 }
 
 updateBasketCounter();
