@@ -1,5 +1,75 @@
 @use "../base/globals.scss" as s;
 
 .login {
+  padding-top: 108px;
+  padding-bottom: 95px;
   @include s.d-flex($direction: column, $align: center);
+  gap: 44px;
+  h1 {
+    font-family: s.$font__rel;
+    font-weight: 800;
+    // font-size: 32px;
+    font-size: 25px;
+    line-height: 1;
+    text-align: center;
+  }
+  &__info {
+    @include s.d-flex($direction: column);
+    gap: 8px;
+    // width: 410px;
+    width: 100%;
+    max-width: 410px;
+
+    &-inputs {
+      @include s.d-flex($direction: column);
+      gap: 15px;
+      input {
+        height: 47px;
+        width: 100%;
+        @include s.input-reg();
+        padding-left: 12px;
+      }
+    }
+    &-links {
+      @include s.d-flex($direction: column, $align: center);
+
+      gap: 5px;
+      &-forgot {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 2.46154;
+        letter-spacing: 0.01em;
+        color: s.$color__green-dark;
+      }
+      &-sing {
+        @include s.btn-gr-wh();
+        @include s.d-flex($direction: column, $align: center, $justify: center);
+        height: 50px;
+        width: 100%;
+      }
+      &-register {
+        margin-top: 9px;
+
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 1.66154;
+        letter-spacing: 0.01em;
+        color: s.$color__green-dark;
+
+        border-bottom: 1.5px solid s.$color__green-dark;
+      }
+    }
+  }
+  @media (min-width: s.$media_768) {
+    h1 {
+      font-size: 32px;
+    }
+    &__info {
+      width: 410px;
+    }
+  }
+  // @media (min-width: s.$media_1440) {
+  // }
+  // @media (min-width: s.$media_1920) {
+  // }
 }
