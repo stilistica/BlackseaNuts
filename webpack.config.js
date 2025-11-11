@@ -70,6 +70,30 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'pages', 'forgotPassword.html'),
       filename: "forgotPassword.html",
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'basket.html'),
+      filename: "basket.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'order.html'),
+      filename: "order.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'checkout.html'),
+      filename: "checkout.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'checkoutUr.html'),
+      filename: "checkoutUr.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'thanks.html'),
+      filename: "thanks.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'error.html'),
+      filename: "error.html",
+    }),
     // new HtmlWebpackPlugin({
     //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
     //   filename: "index.html",
