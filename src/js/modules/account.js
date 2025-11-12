@@ -1,3 +1,5 @@
+import { initCustomSelectRegister } from "./register";
+
 const navLinksAccount = document.querySelectorAll(
   ".account-nav__info-div-list a"
 );
@@ -36,4 +38,29 @@ if (photoContainerContacts) {
       render.readAsDataURL(file);
     }
   });
+}
+
+const reqpage = document.querySelector(".reqpage");
+if (reqpage) {
+  const countryActiveOne = reqpage.querySelector(
+    ".register-container__two-other-ur-adress-forms-country-active"
+  );
+  const regionActiveOne = reqpage.querySelector(
+    ".register-container__two-other-ur-adress-forms-region-active"
+  );
+
+  if (countryActiveOne) {
+    initCustomSelectRegister(
+      ".register-container__two-other-ur-adress-forms-country-active",
+      ".register-container__two-other-ur-adress-forms-country-variant",
+      ".register-container__two-other-ur-adress-forms-country-variant li"
+    );
+  }
+  if (regionActiveOne) {
+    initCustomSelectRegister(
+      ".register-container__two-other-ur-adress-forms-region-active",
+      ".register-container__two-other-ur-adress-forms-region-variant",
+      ".register-container__two-other-ur-adress-forms-region-variant li"
+    );
+  }
 }

@@ -20,16 +20,24 @@
             class="register-container__two-other-ur-rec register-container__two-other-variant-rec"
           >
             <h2>1. Реквизиты</h2>
-            <input type="text" name="recRegister" placeholder="ОКПО" />
+            <input
+              class="reqpage-container__forms-input"
+              type="text"
+              name="recRegister"
+              placeholder="ОКПО"
+            />
           </div>
           <div class="account-contact__info-container adresspage-form">
             <h2 class="adresspage-form-title">2. Адрес</h2>
             <div
               class="account-contact__info-container-forms-list adresspage-form-list"
             >
-              <div class="register-container__one-adress-forms-input-country">
+              <div
+                class="register-container__one-adress-forms-input-country reqpage-container__forms-input"
+              >
                 <div
-                  class="register-container__one-adress-forms-input-country-active"
+                  class="register-container__one-adress-forms-input-country-active
+                  reqpage-container__forms-input-active"
                 >
                   <p>Страна</p>
                   <svg>
@@ -37,7 +45,8 @@
                   </svg>
                 </div>
                 <ul
-                  class="register-container__one-adress-forms-input-country-variant"
+                  class="register-container__one-adress-forms-input-country-variant
+                  reqpage-container__forms-variant"
                 >
                   <li>Украина</li>
                   <hr />
@@ -46,9 +55,12 @@
                   <li>Молдова</li>
                 </ul>
               </div>
-              <div class="register-container__one-adress-forms-input-region">
+              <div
+                class="register-container__one-adress-forms-input-region reqpage-container__forms-input"
+              >
                 <div
-                  class="register-container__one-adress-forms-input-region-active"
+                  class="register-container__one-adress-forms-input-region-active
+                  reqpage-container__forms-input-active-t"
                 >
                   <p>Область</p>
                   <svg>
@@ -56,7 +68,8 @@
                   </svg>
                 </div>
                 <ul
-                  class="register-container__one-adress-forms-input-region-variant"
+                  class="register-container__one-adress-forms-input-region-variant
+                  reqpage-container__forms-input-variant-t"
                 >
                   <li>Киевская</li>
                   <hr />
@@ -64,12 +77,18 @@
                 </ul>
               </div>
               <input
+                class="reqpage-container__forms-input"
                 type="text"
                 name="cityRegister"
                 placeholder="Город*"
                 required
               />
-              <input type="text" name="adressRegister" placeholder="Адрес" />
+              <input
+                class="reqpage-container__forms-input"
+                type="text"
+                name="adressRegister"
+                placeholder="Адрес"
+              />
             </div>
           </div>
           <div
@@ -80,7 +99,7 @@
               class="register-container__two-other-ur-adress-forms register-container__two-other-variant-adress-forms"
             >
               <div
-                class="register-container__two-other-ur-adress-forms-country register-container__two-other-variant-adress-forms-country"
+                class="register-container__two-other-ur-adress-forms-country register-container__two-other-variant-adress-forms-country reqpage-container__forms-input"
               >
                 <div
                   class="register-container__two-other-ur-adress-forms-country-active register-container__two-other-variant-adress-forms-country-active"
@@ -101,7 +120,7 @@
                 </ul>
               </div>
               <div
-                class="register-container__two-other-ur-adress-forms-region register-container__two-other-variant-adress-forms-region"
+                class="register-container__two-other-ur-adress-forms-region register-container__two-other-variant-adress-forms-region reqpage-container__forms-input"
               >
                 <div
                   class="register-container__two-other-ur-adress-forms-region-active register-container__two-other-variant-adress-forms-region-active"
@@ -120,17 +139,30 @@
                 </ul>
               </div>
               <input
+                class="reqpage-container__forms-input"
                 type="text"
                 name="cityRegister"
                 placeholder="Город*"
                 required
               />
-              <input type="text" name="adressRegister" placeholder="Адрес" />
-              <input type="text" name="indexRegister" placeholder="Индекс" />
+              <input
+                class="reqpage-container__forms-input"
+                type="text"
+                name="adressRegister"
+                placeholder="Адрес"
+              />
+              <input
+                class="reqpage-container__forms-input"
+                type="text"
+                name="indexRegister"
+                placeholder="Индекс"
+              />
             </div>
           </div>
         </div>
-        <button class="account-contact__info-container-btn adresspage-form-btn">
+        <button
+          class="account-contact__info-container-btn adresspage-form-btn reqpage-container__forms-btn"
+        >
           Сохранить
         </button>
       </div>
