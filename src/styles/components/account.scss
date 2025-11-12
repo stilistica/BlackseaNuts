@@ -1,0 +1,119 @@
+@use "../base/globals.scss" as s;
+
+.accountpage {
+  padding-top: 106px;
+  padding-bottom: 100px;
+  // @include s.d-flex($direction: row);
+  @include s.d-flex($direction: column);
+  gap: 78px;
+  &__info {
+    // width: 960px;
+    // @include s.d-flex($direction: row, $justify: space-between);
+    @include s.d-flex($direction: column);
+
+    &-desc {
+      margin-top: 2px;
+      @include s.d-flex($direction: column);
+      p {
+        font-family: s.$font__rel;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 2;
+      }
+      &-tel {
+        @include s.d-flex($direction: row, $align: center);
+        gap: 10px;
+        svg {
+          width: 12px;
+          height: 12px;
+          fill: s.$color__green-dark;
+        }
+        span {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 1.28571;
+          letter-spacing: 0.01em;
+          color: s.$color__green-dark;
+        }
+      }
+    }
+    &-sale {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      color: s.$color__green-dark;
+    }
+  }
+  @media (min-width: s.$media_768) {
+    @include s.d-flex($direction: row);
+    &__info {
+      // width: 960px;
+      // @include s.d-flex($direction: row, $justify: space-between);
+      @include s.d-flex($direction: column);
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    &__info {
+      // width: 960px;
+      width: 680px;
+      @include s.d-flex($direction: row, $justify: space-between);
+    }
+  }
+  @media (min-width: s.$media_1920) {
+    &__info {
+      width: 960px;
+    }
+  }
+}
+
+.account-nav {
+  width: 250px;
+  margin-left: -2px;
+  @include s.d-flex($direction: column);
+  gap: 65px;
+  h1 {
+    font-family: s.$font__rel;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 1;
+  }
+  &__info {
+    @include s.d-flex($direction: column);
+    gap: 34px;
+    &-div {
+      @include s.d-flex($direction: column);
+      gap: 12px;
+      font-family: s.$font__rel;
+      h2 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.77778;
+      }
+      &-list {
+        @include s.d-flex($direction: column);
+        gap: 3px;
+        a {
+          display: inline-block;
+          // width: auto;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 1.5;
+          color: s.$color__blue-dark;
+
+          transition: color 0.5 ease;
+
+          p {
+            display: inline-block;
+            &.active-link {
+              border-bottom: 3px solid s.$color__green-dark;
+              color: s.$color__green-dark;
+            }
+          }
+          &:hover {
+            color: s.$color__green-dark;
+          }
+        }
+      }
+    }
+  }
+}

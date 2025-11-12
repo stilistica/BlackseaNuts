@@ -21,5 +21,6 @@ import "./modules/cardTabs.js";
 import "./modules/register.js";
 import "./modules/basket.js";
 import "./modules/checkout.js";
+import "./modules/account.js";
 
 import "./modules/heroVideo.js";

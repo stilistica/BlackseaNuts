@@ -58,7 +58,7 @@ function openModal() {
       <a href="payment.html" aria-label="link">Оплата и доставка</a>
       <a href="corporate.html" aria-label="link">Оптовым и корпоративным клиентам</a>
       <a href="articles.html" aria-label="link">Новости и статьи</a>
-      <a href="./about.html" aria-label="link">Контакты</a>
+      <a href="account.html" aria-label="link">Контакты</a>
     </nav>`;
   // document.body.appendChild(modal);
   headerMob.appendChild(modal);
