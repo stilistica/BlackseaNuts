@@ -94,14 +94,39 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'pages', 'error.html'),
       filename: "error.html",
     }),
-    // new HtmlWebpackPlugin({
-    //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
-    //   filename: "index.html",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: path.resolve(__dirname, 'src', 'pages', 'index.html'),
-    //   filename: "index.html",
-    // }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'account.html'),
+      filename: "account.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'orderHistory.html'),
+      filename: "orderHistory.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'transactionHistory.html'),
+      filename: "transactionHistory.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'contacts.html'),
+      filename: "contacts.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'contactsUr.html'),
+      filename: "contactsUr.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'password.html'),
+      filename: "password.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'adress.html'),
+      filename: "adress.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'pages', 'requisites.html'),
+      filename: "requisites.html",
+    }),
+
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
     }),

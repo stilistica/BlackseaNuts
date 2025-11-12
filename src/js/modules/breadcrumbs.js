@@ -23,9 +23,14 @@ if (breadcrumbsContainer) {
     "checkoutUr.html": "Оформление заказа",
     "thanks.html": "Спасибо",
     "error.html": "404",
-    // "corporate.html": "Оптовым и корпоративным клиентам",
-    // "corporate.html": "Оптовым и корпоративным клиентам",
-    // "corporate.html": "Оптовым и корпоративным клиентам",
+    "account.html": "Личный кабинет",
+    "orderHistory.html": "История заказов",
+    "transactionHistory.html": "История транзакций",
+    "contacts.html": "Контактная информация",
+    "contactsUr.html": "Контактная информация",
+    "password.html": "Вход",
+    "adress.html": "Адрес",
+    "requisites.html": "Адрес и реквизиты",
   };
 
   const currentPageName = pageNames[page] || "Страница";
@@ -43,6 +48,21 @@ if (breadcrumbsContainer) {
 <a href="index.html">Главная</a> 
 <span>→</span>
 <a href="basket.html">Корзина</a> 
+<span>→</span>
+<p>${currentPageName}</span>
+</div>
+	`;
+  }
+  if (page === "orderHistory.html" 
+    || page === "transactionHistory.html"
+    || page === "contacts.html"
+    || page === "contactsUr.html"
+    ) {
+    html = `
+<div class="breadcrumbs__info">
+<a href="index.html">Главная</a> 
+<span>→</span>
+<a href="basket.html">Личный кабинет</a> 
 <span>→</span>
 <p>${currentPageName}</span>
 </div>
