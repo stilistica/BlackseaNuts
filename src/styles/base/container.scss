@@ -52,6 +52,12 @@
     margin-bottom: 17px;
   }
 }
+.div-margin {
+  margin-top: 80px;
+  @media (min-width: s.$media_1440) {
+  margin-top: 0px;
+  }
+}
 // .section {
 // padding-top: 45px;
 // padding-bottom: 45px;

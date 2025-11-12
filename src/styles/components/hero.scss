@@ -238,6 +238,56 @@
     }
   }
 }
+
+// --------- thanksepage ----------
+.hero-thanks {
+  width: 100%;
+  min-height: 417px;
+
+  background-image: url("../img/components/corporatepage/hero.png");
+  @include s.bgr();
+
+  @media (min-width: s.$media_1440) {
+    min-height: 518px;
+  }
+  &__text {
+    padding: 150px 10px 0 10px;
+    @include s.d-flex($direction: column, $align: center);
+    gap: 20px;
+    text-align: center;
+
+    color: s.$color__white;
+    font-family: s.$font__rel;
+
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 0.71111;
+    }
+    p {
+      max-width: 430px;
+      font-size: 17px;
+
+      font-weight: 500;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    @media (min-width: s.$media_768) {
+    }
+    @media (min-width: s.$media_1440) {
+      padding-top: 218px;
+      gap: 31px;
+
+      h1 {
+        font-size: 45px;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
 // --------- video hero ----------
 .hero {
   position: relative;
