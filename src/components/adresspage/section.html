@@ -1,0 +1,59 @@
+<div class="container breadcrumbs breadcrumbs-gray"></div>
+<section class="container account-contact adresspage">
+  <include src="components/accountNav.html"></include>
+  <div class="account-contact__info adresspage__info">
+    <div class="account-contact__info-desc">
+      <p>Ваш личный менеджер Олег</p>
+      <div class="account-contact__info-desc-tel">
+        <svg>
+          <use href="../img/sprite.svg#icon-tel-mob"></use>
+        </svg>
+        <span>+38 067 777 14 12</span>
+      </div>
+    </div>
+    <div class="account-contact__info-container adresspage-form">
+      <h2 class="adresspage-form-title">Адрес</h2>
+      <div
+        class="account-contact__info-container-forms-list adresspage-form-list"
+      >
+        <div class="register-container__one-adress-forms-input-country">
+          <div
+            class="register-container__one-adress-forms-input-country-active"
+          >
+            <p>Страна</p>
+            <svg>
+              <use href="../img/sprite.svg#icon-arrow-b"></use>
+            </svg>
+          </div>
+          <ul
+            class="register-container__one-adress-forms-input-country-variant"
+          >
+            <li>Украина</li>
+            <hr />
+            <li>Польша</li>
+            <hr />
+            <li>Молдова</li>
+          </ul>
+        </div>
+        <div class="register-container__one-adress-forms-input-region">
+          <div class="register-container__one-adress-forms-input-region-active">
+            <p>Область</p>
+            <svg>
+              <use href="../img/sprite.svg#icon-arrow-b"></use>
+            </svg>
+          </div>
+          <ul class="register-container__one-adress-forms-input-region-variant">
+            <li>Киевская</li>
+            <hr />
+            <li>Одесская</li>
+          </ul>
+        </div>
+        <input type="text" name="cityRegister" placeholder="Город*" required />
+        <input type="text" name="adressRegister" placeholder="Адрес" />
+      </div>
+      <button class="account-contact__info-container-btn adresspage-form-btn">
+        Сохранить
+      </button>
+    </div>
+  </div>
+</section>

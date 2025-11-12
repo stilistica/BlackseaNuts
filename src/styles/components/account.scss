@@ -412,7 +412,31 @@
     }
   }
 }
-
+.adresspage {
+  padding-top: 97px;
+  padding-bottom: 100px;
+  &__info {
+    gap: 45px;
+  }
+  &-form {
+    @include s.d-flex($direction: column);
+    gap: 21px;
+    max-width: 474px;
+    &-title {
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 1.88235;
+      letter-spacing: 0.01em;
+    }
+    &-list {
+      @include s.d-flex($direction: column);
+    }
+    &-btn {
+      margin: -9px 0 0 auto;
+      @include s.btn-gr-wh();
+    }
+  }
+}
 .account-nav {
   width: 250px;
   margin-left: -2px;
