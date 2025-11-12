@@ -13,3 +13,27 @@ if (navLinksAccount) {
     }
   });
 }
+
+const photoContainerContacts = document.querySelector(
+  ".account-contact__info-container-forms-img"
+);
+if (photoContainerContacts) {
+  const img = photoContainerContacts.querySelector("img");
+  const uploadText = photoContainerContacts.querySelector("p");
+  const fileInput = photoContainerContacts.querySelector("input[type='file']");
+
+  uploadText.addEventListener("click", () => {
+    fileInput.click();
+  });
+
+  fileInput.addEventListener("change", (el) => {
+    const file = el.target.files[0];
+    if (file) {
+      const render = new FileReader();
+      render.onload = function (e) {
+        img.src = e.target.result;
+      };
+      render.readAsDataURL(file);
+    }
+  });
+}

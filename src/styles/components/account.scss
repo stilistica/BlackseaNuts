@@ -278,16 +278,128 @@
       }
       & .col-status-trans {
         width: 584px;
-
       }
       & .col-count-trans {
         width: 209px;
-
       }
     }
   }
 }
 
+.account-contact {
+  padding-top: 109px;
+  padding-bottom: 96px;
+  @include s.d-flex($direction: column);
+  gap: 80px;
+  &__info {
+    @include s.d-flex($direction: column);
+    gap: 58px;
+    &-desc {
+      margin-top: 2px;
+      // margin-left: 26px;
+      @include s.d-flex($direction: column);
+      p {
+        font-family: s.$font__rel;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 2;
+      }
+      &-tel {
+        @include s.d-flex($direction: row, $align: center);
+        gap: 10px;
+        svg {
+          width: 12px;
+          height: 12px;
+          fill: s.$color__green-dark;
+        }
+        span {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 1.28571;
+          letter-spacing: 0.01em;
+          color: s.$color__green-dark;
+        }
+      }
+    }
+    &-container {
+      @include s.d-flex($direction: column);
+      gap: 16px;
+      &-forms {
+        // @include s.d-flex($direction: row);
+        @include s.d-flex($direction: column);
+        gap: 29px;
+        &-list {
+          // width: 474px;
+          max-width: 474px;
+          @include s.d-flex($direction: column);
+          gap: 15px;
+          input {
+            height: 47px;
+            width: 100%;
+            @include s.input-reg();
+          }
+        }
+        &-img {
+          position: relative;
+          width: 131px;
+          height: 170px;
+
+          @include s.d-flex(
+            $direction: column,
+            $align: center,
+            $justify: center
+          );
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          p {
+            cursor: pointer;
+            margin-top: 10px;
+            position: absolute;
+
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1.30769;
+            color: s.$color__white;
+
+            border-bottom: 1.5px dashed #fff;
+          }
+        }
+      }
+      &-btn {
+        @include s.btn-gr-wh();
+        @include s.d-flex($direction: column, $align: center, $justify: center);
+
+        width: 229px;
+        height: 50px;
+
+        font-family: s.$font__rel;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.0625;
+      }
+    }
+  }
+  @media (min-width: s.$media_768) {
+    &__info {
+      &-container {
+        &-forms {
+          @include s.d-flex($direction: row);
+          gap: 29px;
+          &-list {
+            width: 474px;
+            max-width: 474px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: s.$media_1440) {
+    @include s.d-flex($direction: row);
+  }
+}
 .account-nav {
   width: 250px;
   margin-left: -2px;

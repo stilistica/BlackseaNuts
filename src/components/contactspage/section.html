@@ -1,0 +1,40 @@
+<div class="container breadcrumbs breadcrumbs-gray"></div>
+<section class="container account-contact">
+  <include src="components/accountNav.html"></include>
+  <div class="account-contact__info">
+    <div class="account-contact__info-desc">
+      <p>Ваш личный менеджер Олег</p>
+      <div class="account-contact__info-desc-tel">
+        <svg>
+          <use href="../img/sprite.svg#icon-tel-mob"></use>
+        </svg>
+        <span>+38 067 777 14 12</span>
+      </div>
+    </div>
+    <div class="account-contact__info-container">
+      <div class="account-contact__info-container-forms">
+        <div class="account-contact__info-container-forms-list">
+          <input type="text" name="nameRegister" placeholder="ФИО*" required />
+          <input
+            type="email"
+            name="emailRegister"
+            placeholder="Email*"
+            required
+          />
+          <input
+            type="tel"
+            name="phoneRegister"
+            placeholder="Телефон*"
+            required
+          />
+        </div>
+        <div class="account-contact__info-container-forms-img ">
+          <img src="../img/components/accountpage/contact.png" alt="photo" />
+          <p>Изменить фото</p>
+          <input type="file" accept="image/*" style="display: none" />
+        </div>
+      </div>
+      <button class="account-contact__info-container-btn">Сохраныть</button>
+    </div>
+  </div>
+</section>
