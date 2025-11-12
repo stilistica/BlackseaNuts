@@ -539,12 +539,25 @@
     margin: 26px auto 0 auto;
   }
   @media (min-width: s.$media_768) {
-
     &__info {
       gap: 129px;
     }
     &__next {
       margin: 26px -5px 0 auto;
+    }
+  }
+}
+.checkout-basket {
+  padding-bottom: 16px;
+  &__info {
+    gap: 71px;
+    & .basketpage__info-desc {
+      margin-top: 1px;
+    }
+  }
+  &__next {
+    & .basketpage__next-inner {
+      margin: 6px 9px 0 auto;
     }
   }
 }

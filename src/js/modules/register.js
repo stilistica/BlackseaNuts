@@ -11,7 +11,7 @@ const regionVariantRegister = document.querySelector(
   ".register-container__one-adress-forms-input-region-variant"
 );
 
-function initCustomSelectRegister(activeSelector, listSelector, itemSelector) {
+export function initCustomSelectRegister(activeSelector, listSelector, itemSelector) {
   const active = document.querySelector(activeSelector);
   const list = document.querySelector(listSelector);
   const items = document.querySelectorAll(itemSelector);

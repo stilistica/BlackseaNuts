@@ -1,0 +1,48 @@
+<section class="container checkout-details">
+  <include src="components/checkoutpage/contacts.html"></include>
+  <div class="checkout-details__delivery">
+    <h2>2. Способ доставки</h2>
+    <div class="checkout-details__delivery-list">
+      <label>
+        <input type="radio" name="deliveryType" value="nova" />
+        Новая почта (по Украине оплата за счет Клиента)
+      </label>
+      <div class="checkout-details__delivery-list-nova"></div>
+      <label class="checkout-details__delivery-list-kur">
+        <input type="radio" name="deliveryType" value="kur" />
+        Курьер по Одессе
+        <div class="checkout-details__delivery-list-kur__flag">
+          <svg>
+            <use href="../img/sprite.svg#icon-flag"></use>
+          </svg>
+          <p>БЕСПЛАТНО</p>
+        </div>
+      </label>
+      <div class="checkout-details__delivery-list-kur-div"></div>
+      <label>
+        <input type="radio" name="deliveryType" value="sam" />
+        Самовывоз со склада
+      </label>
+    </div>
+  </div>
+  <div class="checkout-details__pay">
+    <h2>3. Способ оплаты</h2>
+    <div class="checkout-details__pay-list">
+      <label>
+        <input type="radio" name="payType" value="cashless" />
+        Безналичный расчет
+      </label>
+      <label>
+        <input type="radio" name="payType" value="liq" />
+        LiqPay / Приват24
+      </label>
+      <label>
+        <input type="radio" name="payType" value="cash" />
+        Наличными при получении (Наложенным платежом)
+      </label>
+    </div>
+  </div>
+  <a class="checkout-details__link" href="thanks.html" aria-label="thanks page">
+    Продолжить
+  </a>
+</section>

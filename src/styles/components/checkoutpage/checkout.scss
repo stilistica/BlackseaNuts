@@ -1,0 +1,141 @@
+@use "../../base/globals.scss" as s;
+
+.checkout-details {
+  padding-bottom: 102px;
+
+  @include s.d-flex($direction: column);
+  &__contacts {
+    max-width: 474px;
+    @include s.d-flex($direction: column);
+    gap: 20px;
+    h2 {
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 1.88235;
+      letter-spacing: 0.01em;
+    }
+    &-list {
+      @include s.d-flex($direction: column);
+      gap: 15px;
+      input {
+        height: 47px;
+        width: 100%;
+        @include s.input-reg();
+      }
+    }
+  }
+  &__delivery {
+    margin-top: 45px;
+    max-width: 474px;
+    @include s.d-flex($direction: column);
+    gap: 17px;
+    h2 {
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 1.88235;
+      letter-spacing: 0.01em;
+    }
+    &-list {
+      @include s.d-flex($direction: column);
+      gap: 3px;
+
+      label {
+        margin-left: -4px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.21429;
+
+        @include s.d-flex($direction: row, $align: center);
+        gap: 7px;
+      }
+      &-kur {
+        @include s.d-flex($direction: row, $align: center);
+        &__flag {
+          margin-left: 5px;
+          position: relative;
+          @include s.d-flex(
+            $direction: column,
+            $align: center,
+            $justify: center
+          );
+
+          width: 96px;
+          height: 35px;
+          overflow: hidden;
+
+          svg {
+            z-index: -2;
+            position: absolute;
+            bottom: -27px;
+            left: 0;
+
+            fill: #e1843e;
+            width: 97px;
+            height: 85px;
+          }
+          p {
+            font-family: s.$font__rel;
+            font-weight: 800;
+            font-size: 10px;
+            letter-spacing: 0.06em;
+            color: #fff;
+          }
+        }
+      }
+      &-nova {
+        @include s.d-flex($direction: column);
+        gap: 13px;
+        &-country {
+          margin-top: 15px;
+        }
+      }
+      &-kur-div {
+        input {
+          margin-bottom: 10px;
+
+          height: 47px;
+          width: 100%;
+          @include s.input-reg();
+        }
+      }
+    }
+  }
+  &__pay {
+    margin-top: 45px;
+    max-width: 474px;
+    @include s.d-flex($direction: column);
+    gap: 17px;
+    h2 {
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 1.88235;
+      letter-spacing: 0.01em;
+    }
+    &-list {
+      @include s.d-flex($direction: column);
+      gap: 12px;
+
+      label {
+        margin-left: -4px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.21429;
+
+        @include s.d-flex($direction: row, $align: center);
+        gap: 7px;
+      }
+    }
+  }
+  &__link {
+    margin-top: 34px;
+    @include s.d-flex($direction: column, $align: center, $justify: center);
+    @include s.btn-gr-wh();
+    width: 249px;
+    height: 50px;
+
+    font-family: s.$font__rel;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.0625;
+  }
+}
