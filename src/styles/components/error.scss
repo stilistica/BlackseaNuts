@@ -1,0 +1,68 @@
+@use "../base/globals.scss" as s;
+
+.error {
+  padding-top: 46px;
+  padding-bottom: 98px;
+  @include s.d-flex($direction: column, $align: center);
+
+  h1 {
+    font-weight: 800;
+    // font-size: 248px;
+    font-size: 138px;
+    letter-spacing: 0.01em;
+    text-align: center;
+
+    background-image: url("../img/components/errorpage/error.png"); /* шлях до твого фото */
+    background-size: cover;
+    background-position: center;
+
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  p {
+    margin-top: -24px;
+    font-family: s.$font__rel;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.66667;
+    text-align: center;
+  }
+  a {
+    margin-top: 18px;
+    // width: 330px;
+    width: 280px;
+    height: 48px;
+    @include s.btn-wh-gr();
+    @include s.d-flex($direction: row, $align: center, $justify: center);
+    gap: 6px;
+
+    font-family: s.$font__mont;
+    font-weight: 700;
+    // font-size: 16px;
+    font-size: 14px;
+    line-height: 1.0625;
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: s.$color__green-dark;
+
+      transition: fill 0.5s ease;
+    }
+    &:hover {
+      svg {
+        fill: s.$color__white;
+      }
+    }
+  }
+  @media (min-width: s.$media_768) {
+    h1 {
+      font-size: 248px;
+    }
+    a {
+      width: 330px;
+
+      font-size: 16px;
+    }
+  }
+}
