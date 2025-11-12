@@ -1,4 +1,5 @@
 import { getBasket, setBasket, updateBasketCounter } from "./localStorage";
+import sprite from "../../img/sprite.svg";
 
 const basketDivs = document.querySelectorAll(".basket-div");
 if (basketDivs) {
@@ -35,16 +36,16 @@ if (basketDivs) {
 <p class="basket-popup__list-item-info">${product.name} ${product.weight}г.</p>
 <div class="basket-popup__list-item-number">
   <svg class="basket-decrease" data-index="${index}">
-    <use href="../img/sprite.svg#icon-decrease"></use>
+    <use href="${sprite}#icon-decrease"></use>
   </svg>
   <p>${product.quantity || 1}</p>
   <svg class="basket-increase" data-index="${index}">
-    <use href="../img/sprite.svg#icon-increase"></use>
+    <use href="${sprite}#icon-increase"></use>
   </svg>
 </div>
 <p class="basket-popup__list-item-price">${product.price} грн.</p>
 <svg class="basket-popup__list-item-delete" data-index="${index}">
-  <use href="../img/sprite.svg#icon-close"></use>
+  <use href="${sprite}#icon-close"></use>
 </svg>
 				`;
         basketList.appendChild(item);
@@ -114,11 +115,11 @@ if (basketBody) {
     </h3>
     <div class="basket-table-body-item-number">
         <svg class="basket-decrease" data-index="${index}">
-          <use href="../img/sprite.svg#icon-decrease"></use>
+          <use href="${sprite}#icon-decrease"></use>
         </svg>
         <span>${quantity}</span>
         <svg class="basket-increase" data-index="${index}">
-          <use href="../img/sprite.svg#icon-increase"></use>
+          <use href="${sprite}#icon-increase"></use>
         </svg>
     </div>
     <p class="basket-table-body-item-price">${product.price} грн.</p>
