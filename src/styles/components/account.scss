@@ -400,6 +400,19 @@
     @include s.d-flex($direction: row);
   }
 }
+.account-contact-ur {
+  padding-bottom: 100px;
+
+  &-forms {
+    @include s.d-flex($direction: column);
+  }
+  @media (min-width: s.$media_768) {
+    &-forms {
+      @include s.d-flex($direction: row, $align: center);
+    }
+  }
+}
+
 .account-nav {
   width: 250px;
   margin-left: -2px;
