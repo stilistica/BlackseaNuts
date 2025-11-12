@@ -437,6 +437,48 @@
     }
   }
 }
+.reqpage {
+  &-container {
+    @include s.d-flex($direction: row);
+    gap: 46px;
+
+    &-img {
+      margin-top: 40px;
+      position: relative;
+      width: 440px;
+      height: 852px;
+
+      @include s.d-flex($direction: column, $align: center, $justify: center);
+
+      &-text {
+        position: absolute;
+        // top: 0;
+        // left: 0;
+        width: 400px;
+        @include s.d-flex($direction: column, $align: center);
+        gap: 10px;
+
+        h3 {
+          font-family: s.$font__rel;
+          font-weight: 800;
+          font-size: 42px;
+          line-height: 1.04762;
+          letter-spacing: 0.01em;
+          text-align: center;
+          color: #fff;
+        }
+        p {
+          font-family: s.$font__rel;
+          font-weight: 600;
+          font-size: 20px;
+          letter-spacing: 0.01em;
+          text-align: center;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 .account-nav {
   width: 250px;
   margin-left: -2px;
